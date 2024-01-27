@@ -1,13 +1,13 @@
 import { useState } from 'react'
-
+import { jsQuizz } from './constants'
 const Quiz = ({ questions }) => {
-  const [currentQuestion, setCurrentQuestuion] = useState(0)
-  const { questions, choices, correctAnswer } = questions[currentQuestion]
+  const [currentQuestion, setCurrentQuestion] = useState(0)
+  const { question, choices, correctAnswer } = questions[currentQuestion]
   return (
     <div className='quiz-container'>
       <>
         <span className='active-question-no'> {currentQuestion + 1}</span>
-        <span className='total-question-no'> {currentQuestion + 1}</span>
+        <span className='total-question'> /{questions.length}</span>
       </>
     </div>
   )

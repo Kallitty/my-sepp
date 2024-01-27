@@ -17,4 +17,7 @@ body {
 }
 
 .quiz-container {
+  font-family: monospace;
+  background: linear-gradient(0deg, $primary 0.03%, $accent);
+  color: $foreground;
 }
