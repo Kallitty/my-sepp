@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { jsQuizz } from './constants'
+
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const { question, choices, correctAnswer } = questions[currentQuestion]
