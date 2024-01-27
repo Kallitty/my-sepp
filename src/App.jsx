@@ -2,11 +2,7 @@ import Quiz from './Quiz'
 import './App.css'
 
 function App() {
-  return (
-    <>
-      <Quiz />;
-    </>
-  )
+  return <Quiz />
 }
 
 export default App
