@@ -2,7 +2,12 @@ import { useState } from 'react'
 
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [canswerIdx, setAnswerIdx] = useState(null)
   const { question, choices, correctAnswer } = questions[currentQuestion]
+
+  const onAnswerClick =(answer, index){
+
+  }
   return (
     <div className='quiz-container'>
       <>
