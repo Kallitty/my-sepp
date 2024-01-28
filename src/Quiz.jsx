@@ -16,7 +16,7 @@ const Quiz = ({ questions }) => {
       setAnswer(false)
     }
 
-    const onClickNext=()=>{}
+    const onClickNext = () => {}
   }
   return (
     <div className='quiz-container'>
@@ -36,10 +36,10 @@ const Quiz = ({ questions }) => {
             </li>
           ))}
         </ul>
-        <div className="footer">
-            <button onClick={onClickNext} disabled={answerIdx===null}>
-              {currentQuestion===questions.length - 1 ? "Finish": "Next">}
-            </button>
+        <div className='footer'>
+          <button onClick={onClickNext} disabled={answerIdx === null}>
+            {currentQuestion === questions.length - 1 ? 'Finish' : 'Next'}
+          </button>
         </div>
       </>
     </div>
