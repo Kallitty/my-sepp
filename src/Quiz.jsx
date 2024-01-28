@@ -52,6 +52,9 @@ const Quiz = ({ questions }) => {
   }
 
   const onTryAgain = () => {
+    setCurrentQuestion(0)
+    setAnswerIdx(null)
+    setAnswer(null)
     setResult(resultInitialState)
     setShowResult(false)
   }
