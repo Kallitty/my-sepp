@@ -3,17 +3,17 @@ import { useState } from 'react'
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answerIdx, setAnswerIdx] = useState(null)
-  
+
   const [answer, setAnswer] = useState(null)
 
   const { question, choices, correctAnswer } = questions[currentQuestion]
 
-  const onAnswerClick =(answer, index){
+  const onAnswerClick = (answer, index) => {
     setAnswerIdx(index)
-    if (answer===correctAnswer){
+    if (answer === correctAnswer) {
       setAnswer(true)
-    }else{
-       setAnswer(false)
+    } else {
+      setAnswer(false)
     }
   }
   return (
@@ -25,7 +25,11 @@ const Quiz = ({ questions }) => {
         <ul>
           {' '}
           {choices.map((answer, index) => (
-            <li onClick={onAnswerClick(answer, index)} key={answer} className={answerIdx===index? 'selected-answer': null}>
+            <li
+              onClick={() => onAnswerClick(answer, index)}
+              key={answer}
+              className={answerIdx === index ? 'selected-answer' : null}
+            >
               {answer}
             </li>
           ))}
