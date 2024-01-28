@@ -20,7 +20,14 @@ const Quiz = ({ questions }) => {
   }
   const onClickNext = () => {
     setAnswerIdx(null)
-  }
+     setResult((prev))=> answer?{ ...prev, score:prev.score +5,
+    correctAnswers: prev.correctAnswers+1} : {
+      ...prev, wrongAnswers:prev.wrongAnswers +1
+    }
+
+    
+      }
+
   return (
     <div className='quiz-container'>
       <>
