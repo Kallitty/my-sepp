@@ -4,7 +4,7 @@ import { resultInitialState } from './constants'
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answerIdx, setAnswerIdx] = useState(null)
-  const [answer, setAnswer] = useState(null)
+  const [answer, setAnswer] = useState(false)
   const [result, setResult] = useState(resultInitialState)
   const [showResult, setShowResult] = useState(false)
   const [showConfirmationModal, setShowConfirmationModal] = useState(false)
@@ -13,6 +13,7 @@ const Quiz = ({ questions }) => {
 
   const onAnswerClick = (answer, index) => {
     setAnswerIdx(index)
+    setAnswer(answer === correctAnswer)
     if (answer === correctAnswer) {
       setAnswer(true)
     } else {
