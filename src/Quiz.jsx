@@ -1,13 +1,13 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { resultInitialState } from './constants'
 
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answerIdx, setAnswerIdx] = useState(null)
-
   const [answer, setAnswer] = useState(null)
   const [result, setResult] = useState(resultInitialState)
   const [showResult, setShowResult] = useState(false)
+  const [showConfirmationModal, setShowConfirmationModal] = useState(false)
 
   const { question, choices, correctAnswer } = questions[currentQuestion]
 
@@ -19,6 +19,16 @@ const Quiz = ({ questions }) => {
       setAnswer(false)
     }
   }
+
+  const handleYesSubmit = () => {
+    setShowResult(true)
+    setShowConfirmationModal(false)
+  }
+
+  const handleNoCancel = () => {
+    setShowConfirmationModal(false)
+  }
+
   const onClickNext = () => {
     setAnswerIdx(null)
     setResult((prev) =>
@@ -37,8 +47,7 @@ const Quiz = ({ questions }) => {
     if (currentQuestion !== questions.length - 1) {
       setCurrentQuestion((prev) => prev + 1)
     } else {
-      setCurrentQuestion(0)
-      setShowResult(true)
+      setShowConfirmationModal(true)
     }
   }
 
@@ -66,6 +75,13 @@ const Quiz = ({ questions }) => {
               {currentQuestion === questions.length - 1 ? 'Finish' : 'Next'}
             </button>
           </div>
+          {showConfirmationModal && (
+            <div className='modal'>
+              <p>Are you sure you want to submit?</p>
+              <button onClick={handleYesSubmit}>Yes</button>
+              <button onClick={handleNoCancel}>No</button>
+            </div>
+          )}
         </>
       ) : (
         <div className='result'>
@@ -76,4 +92,5 @@ const Quiz = ({ questions }) => {
     </div>
   )
 }
+
 export default Quiz
