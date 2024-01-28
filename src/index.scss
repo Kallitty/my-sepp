@@ -49,6 +49,9 @@ body {
       font-size: 15px;
       background: $bg;
       border: 1px solid $disabled;
-    }
+      border-bottom: 16px;
+      padding: 11px;
+      margin-top: 15px;
+      cursor: pointer;
   }
 }
