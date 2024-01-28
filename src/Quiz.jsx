@@ -51,6 +51,11 @@ const Quiz = ({ questions }) => {
     }
   }
 
+  const onTryAgain = () => {
+    setResult(resultInitialState)
+    setShowResult(false)
+  }
+
   return (
     <div className='quiz-container'>
       {!showResult ? (
@@ -98,7 +103,7 @@ const Quiz = ({ questions }) => {
           <p>
             Wrong Answers:<span> {result.wrongAnswers}</span>
           </p>
-          <button>Try again</button>
+          <button onClick={onTryAgain}>Try again</button>
         </div>
       )}
     </div>
