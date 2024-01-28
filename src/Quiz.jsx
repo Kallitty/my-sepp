@@ -90,7 +90,7 @@ const Quiz = ({ questions }) => {
             Total Questions:<span> {questions.length}</span>
           </p>
           <p>
-            Total Questions:<span> {questions.length}</span>
+            Total Score:<span> {result.length}</span>
           </p>
           <p>
             Total Questions:<span> {questions.length}</span>
