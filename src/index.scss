@@ -76,6 +76,7 @@ body {
     &:disabled {
       background: $bg-accent;
       color: $disabled;
+      cursor: not-allowed;
     }
   }
 }

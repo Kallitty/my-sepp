@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { resultInitialState } from './constants'
 
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answerIdx, setAnswerIdx] = useState(null)
 
   const [answer, setAnswer] = useState(null)
+  const [result, setResult] = useState(null)
 
   const { question, choices, correctAnswer } = questions[currentQuestion]
 
@@ -15,8 +17,9 @@ const Quiz = ({ questions }) => {
     } else {
       setAnswer(false)
     }
-
-    const onClickNext = () => {}
+  }
+  const onClickNext = () => {
+    setAnswerIdx(null)
   }
   return (
     <div className='quiz-container'>
