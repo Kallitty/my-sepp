@@ -6,7 +6,8 @@ const Quiz = ({ questions }) => {
   const [answerIdx, setAnswerIdx] = useState(null)
 
   const [answer, setAnswer] = useState(null)
-  const [result, setResult] = useState(null)
+  const [result, setResult] = useState(resultInitialState)
+  const [showResult, setShowResult] = useState(false)
 
   const { question, choices, correctAnswer } = questions[currentQuestion]
 
@@ -20,13 +21,26 @@ const Quiz = ({ questions }) => {
   }
   const onClickNext = () => {
     setAnswerIdx(null)
-     setResult((prev))=> answer?{ ...prev, score:prev.score +5,
-    correctAnswers: prev.correctAnswers+1} : {
-      ...prev, wrongAnswers:prev.wrongAnswers +1
-    }
+    setResult((prev) =>
+      answer
+        ? {
+            ...prev,
+            score: prev.score + 5,
+            correctAnswers: prev.correctAnswers + 1,
+          }
+        : {
+            ...prev,
+            wrongAnswers: prev.wrongAnswers + 1,
+          }
+    )
 
-    
-      }
+    if (currentQuestion !== questions.length - 1) {
+      setCurrentQuestion((prev) => prev + 1)
+    } else {
+      setCurrentQuestion(0)
+      setShowResult(true)
+    }
+  }
 
   return (
     <div className='quiz-container'>
