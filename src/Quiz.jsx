@@ -86,7 +86,15 @@ const Quiz = ({ questions }) => {
       ) : (
         <div className='result'>
           <h3>Result</h3>
-          <p></p>
+          <p>
+            Total Questions:<span> {questions.length}</span>
+          </p>
+          <p>
+            Total Questions:<span> {questions.length}</span>
+          </p>
+          <p>
+            Total Questions:<span> {questions.length}</span>
+          </p>
         </div>
       )}
     </div>
