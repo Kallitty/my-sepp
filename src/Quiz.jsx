@@ -90,10 +90,13 @@ const Quiz = ({ questions }) => {
             Total Questions:<span> {questions.length}</span>
           </p>
           <p>
-            Total Score:<span> {result.length}</span>
+            Total Score:<span> {result.score}</span>
           </p>
           <p>
-            Total Questions:<span> {questions.length}</span>
+            Correct Answers:<span> {result.correctAnswers}</span>
+          </p>
+          <p>
+            Wrong Answers:<span> {result.wrongAnswers}</span>
           </p>
         </div>
       )}
