@@ -39,4 +39,16 @@ body {
     font-weight: 500px;
     margin: 0;
   }
+  ul {
+    margin-top: 20px;
+    margin-left: -40px;
+    li {
+      text-decoration: none;
+      list-style: none;
+      color: $foreground;
+      font-size: 15px;
+      background: $bg;
+      border: 1px solid $disabled;
+    }
+  }
 }
