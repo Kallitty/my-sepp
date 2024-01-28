@@ -68,7 +68,9 @@ const Quiz = ({ questions }) => {
           </div>
         </>
       ) : (
-        <div></div>
+        <div className='result'>
+          <h3>Result</h3>
+        </div>
       )}
     </div>
   )
