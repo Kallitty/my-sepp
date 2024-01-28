@@ -34,6 +34,11 @@ const Quiz = ({ questions }) => {
             </li>
           ))}
         </ul>
+        <div className="footer">
+            <button>
+              {currentQuestion}===<questions.length-1? "Finish": Next></questions>
+            </button>
+        </div>
       </>
     </div>
   )
