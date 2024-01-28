@@ -15,6 +15,8 @@ const Quiz = ({ questions }) => {
     } else {
       setAnswer(false)
     }
+
+    const onClickNext=()=>{}
   }
   return (
     <div className='quiz-container'>
@@ -35,8 +37,8 @@ const Quiz = ({ questions }) => {
           ))}
         </ul>
         <div className="footer">
-            <button>
-              {currentQuestion}===<questions.length-1? "Finish": Next></questions>
+            <button onClick={onClickNext} disabled={answerIdx===null}>
+              {currentQuestion===questions.length - 1 ? "Finish": "Next">}
             </button>
         </div>
       </>
