@@ -98,6 +98,7 @@ const Quiz = ({ questions }) => {
           <p>
             Wrong Answers:<span> {result.wrongAnswers}</span>
           </p>
+          <button>Try again</button>
         </div>
       )}
     </div>
