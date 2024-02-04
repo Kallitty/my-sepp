@@ -13,6 +13,8 @@ export const jsQuizz = {
       correctAnswer: 'Virtual DOM',
     },
     {
+      image: '/simages/quesimg1.jpg',
+
       question: 'What is ReactJS?',
       choices: [
         'Server-side framework',
@@ -22,7 +24,6 @@ export const jsQuizz = {
       ],
       type: 'MCQs',
       correctAnswer: 'User Interface framework',
-      image: './images/quesimg1.jpg',
     },
     {
       question:

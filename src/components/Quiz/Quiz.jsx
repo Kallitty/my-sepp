@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { resultInitialState } from '../../constants'
+import questionImage from '../../simages/quesimg1.jpg'
 
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -61,6 +62,21 @@ const Quiz = ({ questions }) => {
 
   return (
     <div className='quiz-container'>
+      {question.image && (
+        <img
+          src={questionImage}
+          alt='Question Diagram'
+          style={{ maxWidth: '100%' }}
+        />
+      )}
+      {question.image && (
+        <img
+          src={question.image}
+          alt='Question Diagram'
+          style={{ maxWidth: '30%' }}
+        />
+      )}
+      <p>{question.image}</p>
       {!showResult ? (
         <>
           <span className='active-question-no'> {currentQuestion + 1}</span>
