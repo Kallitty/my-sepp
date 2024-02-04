@@ -75,7 +75,6 @@ const Quiz = ({ questions }) => {
                 className={answerIdx === index ? 'selected-answer' : null}
               >
                 {answer}
-                {answer}
               </li>
             ))}
           </ul>
