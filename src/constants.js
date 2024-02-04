@@ -22,7 +22,7 @@ export const jsQuizz = {
       ],
       type: 'MCQs',
       correctAnswer: 'User Interface framework',
-      image: 'path/to/reactjs-image.png',
+      image: './images/quesimg1.jpg',
     },
     {
       question:
