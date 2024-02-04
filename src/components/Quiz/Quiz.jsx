@@ -1,6 +1,6 @@
+import { jsQuizz } from '../../constants'
 import React, { useState } from 'react'
 import { resultInitialState } from '../../constants'
-import questionImage from '../../simages/quesimg1.jpg'
 
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -10,7 +10,7 @@ const Quiz = ({ questions }) => {
   const [showResult, setShowResult] = useState(false)
   const [showConfirmationModal, setShowConfirmationModal] = useState(false)
 
-  const { question, choices, correctAnswer } = questions[currentQuestion]
+  const { question, choices, correctAnswer, image } = questions[currentQuestion]
 
   const onAnswerClick = (answer, index) => {
     setAnswerIdx(index)
@@ -62,25 +62,19 @@ const Quiz = ({ questions }) => {
 
   return (
     <div className='quiz-container'>
-      {question.image && (
-        <img
-          src={questionImage}
-          alt='Question Diagram'
-          style={{ maxWidth: '100%' }}
-        />
-      )}
-      {question.image && (
-        <img
-          src={question.image}
-          alt='Question Diagram'
-          style={{ maxWidth: '30%' }}
-        />
-      )}
-      <p>{question.image}</p>
       {!showResult ? (
         <>
           <span className='active-question-no'> {currentQuestion + 1}</span>
           <span className='total-question'> /{questions.length}</span>
+
+          {image && (
+            <img
+              src={image}
+              alt='Question Diagram'
+              style={{ maxWidth: '100%', maxWidth: '30% ' }}
+            />
+          )}
+          <h2> {image}</h2>
           <h2> {question}</h2>
           <ul>
             {' '}

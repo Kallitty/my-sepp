@@ -1,6 +1,7 @@
 export const jsQuizz = {
   questions: [
     {
+      icon: '/siteimg2.jpeg',
       question:
         'Which of the following is used in React.js to increase performance?',
       choices: [
@@ -13,8 +14,7 @@ export const jsQuizz = {
       correctAnswer: 'Virtual DOM',
     },
     {
-      image: '/simages/quesimg1.jpg',
-
+      icon: 'simages/quesimg1.jpg',
       question: 'What is ReactJS?',
       choices: [
         'Server-side framework',
@@ -50,9 +50,4 @@ export const jsQuizz = {
       correctAnswer: 'JavaScript compiler',
     },
   ],
-}
-export const resultInitialState = {
-  score: 0,
-  correctAnswers: 0,
-  wrongAnswers: 0,
 }

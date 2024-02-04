@@ -7,21 +7,29 @@
   margin-top: 100px;
   padding: 30px 60px;
   box-sizing: border-box;
+  img {
+    max-width: 500px;
+    margin-bottom: 20px; // Add some margin if needed
+    border-radius: 8px; // Add border radius if needed
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Add box shadow if needed
+  }
 
   .active-question-no {
     font-size: 32px;
     font-weight: 500px;
     color: $primary;
+    margin-bottom: 5px;
   }
   .total-question {
     font-size: 16px;
     font-weight: 500px;
     color: $disabled;
+    margin-bottom: 5px;
   }
   h2 {
+    margin-top: 40px;
     font-size: 20px;
     font-weight: 500px;
-    margin: 0;
   }
   ul {
     margin-top: 20px;
