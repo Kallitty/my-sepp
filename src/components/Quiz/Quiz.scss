@@ -54,24 +54,35 @@
     }
   }
   .footer {
-    justify-content: flex-end;
     display: flex;
+    justify-content: space-between; // This line to space items evenly
+    align-items: center; // this line to vertically center items
   }
 
-  button {
+  // button {
+  //   background: linear-gradient(0deg, $primary 0.03%, $accent);
+  //   border-radius: 9px;
+  //   font-size: $bg;
+  //   padding: 10px 42px;
+  //   outline: none;
+  //   border: none;
+  //   margin-top: 15px;
+  //   cursor: pointer;
+  //   &:disabled {
+  //     background: $bg-accent;
+  //     color: $disabled;
+  //     cursor: not-allowed;
+  //   }
+  // }
+  .previous-button,
+  .next-button {
     background: linear-gradient(0deg, $primary 0.03%, $accent);
     border-radius: 9px;
     font-size: $bg;
-    padding: 10px 42px;
+    padding: 10px 20px; // Adjust the padding as needed
     outline: none;
     border: none;
-    margin-top: 15px;
     cursor: pointer;
-    &:disabled {
-      background: $bg-accent;
-      color: $disabled;
-      cursor: not-allowed;
-    }
   }
   .result {
     text-align: center;

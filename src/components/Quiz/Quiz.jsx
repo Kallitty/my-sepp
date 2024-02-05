@@ -104,12 +104,16 @@ const Quiz = ({ questions }) => {
                 <button
                   onClick={onClickPrevious}
                   disabled={currentQuestion === 0}
-                  className='prevButton'
+                  className='previous-button'
                 >
                   Previous
                 </button>
 
-                <button onClick={onClickNext} disabled={answerIdx === null}>
+                <button
+                  onClick={onClickNext}
+                  disabled={answerIdx === null}
+                  className='next-button'
+                >
                   {index === questions.length - 1 ? 'Finish' : 'Next'}
                 </button>
               </div>
