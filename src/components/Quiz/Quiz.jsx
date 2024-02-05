@@ -1,6 +1,7 @@
-import { jsQuizz } from '../../constants'
+// import { jsQuizz } from '../../constants'
+
 import React, { useState } from 'react'
-import { resultInitialState } from '../../constants'
+import { resultInitialState } from '../../initials'
 
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -59,40 +60,62 @@ const Quiz = ({ questions }) => {
     setResult(resultInitialState)
     setShowResult(false)
   }
-
+  const onClickPrevious = () => {
+    if (currentQuestion !== 0) {
+      setCurrentQuestion((prev) => prev - 1)
+      setAnswerIdx(null)
+      setAnswer(null)
+    }
+  }
   return (
     <div className='quiz-container'>
       {!showResult ? (
         <>
-          <span className='active-question-no'> {currentQuestion + 1}</span>
-          <span className='total-question'> /{questions.length}</span>
+          {questions.map((q, index) => (
+            <div
+              key={q.id}
+              style={{ display: currentQuestion === index ? 'block' : 'none' }}
+            >
+              <div>
+                <span className='active-question-no'> {index + 1}</span>
+                <span className='total-question'> /{questions.length}</span>
+              </div>
+              {q.isVisible && (
+                <img
+                  src={q.icon}
+                  alt={`Question ${q.id} icon`}
+                  className='icon-img'
+                />
+              )}
 
-          {image && (
-            <img
-              src={image}
-              alt='Question Diagram'
-              style={{ maxWidth: '100%', maxWidth: '30% ' }}
-            />
-          )}
-          <h2> {image}</h2>
-          <h2> {question}</h2>
-          <ul>
-            {' '}
-            {choices.map((answer, index) => (
-              <li
-                onClick={() => onAnswerClick(answer, index)}
-                key={answer}
-                className={answerIdx === index ? 'selected-answer' : null}
-              >
-                {answer}
-              </li>
-            ))}
-          </ul>
-          <div className='footer'>
-            <button onClick={onClickNext} disabled={answerIdx === null}>
-              {currentQuestion === questions.length - 1 ? 'Finish' : 'Next'}
-            </button>
-          </div>
+              <h2>{q.question}</h2>
+              <ul>
+                {q.choices.map((answer, i) => (
+                  <li
+                    onClick={() => onAnswerClick(answer, i)}
+                    key={answer}
+                    className={answerIdx === i ? 'selected-answer' : null}
+                  >
+                    {answer}
+                  </li>
+                ))}
+              </ul>
+              <div className='footer'>
+                <button
+                  onClick={onClickPrevious}
+                  disabled={currentQuestion === 0}
+                  className='prevButton'
+                >
+                  Previous
+                </button>
+
+                <button onClick={onClickNext} disabled={answerIdx === null}>
+                  {index === questions.length - 1 ? 'Finish' : 'Next'}
+                </button>
+              </div>
+            </div>
+          ))}
+
           {showConfirmationModal && (
             <div className='modal'>
               <p>Are you sure you want to submit?</p>
