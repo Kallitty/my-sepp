@@ -7,7 +7,7 @@ const Quiz = ({ questions }) => {
   const [selectedAnswers, setSelectedAnswers] = useState(
     new Array(questions.length).fill(null)
   )
-  const [result, setResult] = useState({ ...resultInitialState }) // Make sure to spread initial state
+  const [result, setResult] = useState({ ...resultInitialState })
   const [showResult, setShowResult] = useState(false)
   const [showConfirmationModal, setShowConfirmationModal] = useState(false)
 
@@ -68,7 +68,7 @@ const Quiz = ({ questions }) => {
   const onTryAgain = () => {
     setCurrentQuestion(0)
     setSelectedAnswers(new Array(questions.length).fill(null))
-    setResult({ ...resultInitialState }) // Reset result to initial state
+    setResult({ ...resultInitialState })
     setShowResult(false)
   }
 
@@ -76,51 +76,57 @@ const Quiz = ({ questions }) => {
     <div className='quiz-container'>
       {!showResult ? (
         <>
-          <div style={{ display: 'block' }}>
-            <div>
-              <span className='active-question-no'> {currentQuestion + 1}</span>
-              <span className='total-question'> /{questions.length}</span>
-            </div>
-            {image && (
-              <img
-                src={image}
-                alt={`Question ${currentQuestion + 1} icon`}
-                className='icon-img'
-              />
-            )}
-            <h2>{question}</h2>
-            <ul>
-              {choices.map((answer, index) => (
-                <li
-                  onClick={() => onAnswerClick(answer, index)}
-                  key={answer}
-                  className={
-                    selectedAnswers[currentQuestion] === index
-                      ? 'selected-answer'
-                      : null
-                  }
+          {questions.map((q, index) => (
+            <div
+              key={q.id}
+              style={{ display: currentQuestion === index ? 'block' : 'none' }}
+            >
+              <div>
+                <span className='active-question-no'> {index + 1}</span>
+                <span className='total-question'> /{questions.length}</span>
+              </div>
+              {q.isVisible && (
+                <img
+                  src={q.icon}
+                  alt={`Question ${q.id} icon`}
+                  className='icon-img'
+                />
+              )}
+
+              <h2>{question}</h2>
+              <ul>
+                {choices.map((answer, index) => (
+                  <li
+                    onClick={() => onAnswerClick(answer, index)}
+                    key={answer}
+                    className={
+                      selectedAnswers[currentQuestion] === index
+                        ? 'selected-answer'
+                        : null
+                    }
+                  >
+                    {answer}
+                  </li>
+                ))}
+              </ul>
+              <div className='footer'>
+                <button
+                  onClick={onClickPrevious}
+                  disabled={currentQuestion === 0}
+                  className='previous-button'
                 >
-                  {answer}
-                </li>
-              ))}
-            </ul>
-            <div className='footer'>
-              <button
-                onClick={onClickPrevious}
-                disabled={currentQuestion === 0}
-                className='previous-button'
-              >
-                Previous
-              </button>
-              <button
-                onClick={onClickNext}
-                disabled={selectedAnswers[currentQuestion] === null}
-                className='next-button'
-              >
-                {currentQuestion === questions.length - 1 ? 'Finish' : 'Next'}
-              </button>
+                  Previous
+                </button>
+                <button
+                  onClick={onClickNext}
+                  disabled={selectedAnswers[currentQuestion] === null}
+                  className='next-button'
+                >
+                  {currentQuestion === questions.length - 1 ? 'Finish' : 'Next'}
+                </button>
+              </div>
             </div>
-          </div>
+          ))}
 
           {showConfirmationModal && (
             <div className='modal'>
