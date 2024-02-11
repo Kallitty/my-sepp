@@ -5,6 +5,7 @@ import { Article, Brand, CTA, Feature, Navbar } from './components'
 
 import { Blog, Features, Footer, Header, Possibility, Sepp } from './containers'
 import './App.css'
+import './index.css'
 
 const App = () => {
   return (
