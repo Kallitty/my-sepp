@@ -13,3 +13,6 @@
 .sepp__navbar-links_logo {
   margin-right: 2rem;
 }
+.sepp__navbar-links_logo img {
+  width: 62px;
+}
