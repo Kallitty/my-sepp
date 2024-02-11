@@ -2,7 +2,7 @@ import React from 'react'
 import './sepp.css'
 
 const Sepp = () => {
-  return <div>Sepp</div>
+  return <div></div>
 }
 
 export default Sepp
