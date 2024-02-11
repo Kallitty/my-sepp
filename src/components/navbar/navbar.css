@@ -2,8 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem 6rem;
 }
 .sepp__navbar-linkssepp__navbar-links {
+  flex: 1;
 }
 .sepp__navbar-links_logo {
 }
