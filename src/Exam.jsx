@@ -1,6 +1,7 @@
 import Quiz from './components/Quiz/Quiz'
 import { jsQuizz } from './records.json'
-import './App.css'
+import './index.scss'
+import './components/Quiz/Quiz.scss'
 
 function Exam() {
   return <Quiz questions={jsQuizz.questions} />
