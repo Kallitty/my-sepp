@@ -1,4 +1,7 @@
 .sepp__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .sepp__navbar-linkssepp__navbar-links {
 }
