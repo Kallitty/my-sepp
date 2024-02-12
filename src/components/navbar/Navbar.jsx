@@ -18,6 +18,10 @@ const Navbar = () => {
           <p href='#Library'>Library</p>
         </div>
       </div>
+      <div className='.sepp__navbar-sign'>
+        <p>Login</p>
+        <button type='button'>Sign up</button>
+      </div>
     </div>
   )
 }
