@@ -33,11 +33,7 @@ const Navbar = () => {
           <img src={logo} alt='logo' />
         </div>
         <div className='sepp__navbar-links_container'>
-          <p href='#home'>Home</p>
-          <p href='#About'>About SEPP</p>
-          <p href='#Library'>Library</p>
-          <p href='#Contactus'>Contact Us</p>
-          <p href='#Donations'>Donations</p>
+          <Menu />
         </div>
       </div>
       <div className='sepp__navbar-sign'>
@@ -60,7 +56,9 @@ const Navbar = () => {
         )}
         {toggleMenu && (
           <div className='sepp__navbar-menu_container scale-up-center'>
-            <div className='sepp__navbar-menu_container-links'></div>
+            <div className='sepp__navbar-menu_container-links'>
+              <Menu />
+            </div>
           </div>
         )}
       </div>
