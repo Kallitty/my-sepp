@@ -13,9 +13,9 @@ const Navbar = () => {
         <div className='sepp__navbar-links_container'>
           <p href='#home'>Home</p>
           <p href='#About'>About SEPP</p>
-          <p href='#Donate'>Donate</p>
-          <p href='#Contactus'>Contact Us</p>
           <p href='#Library'>Library</p>
+          <p href='#Contactus'>Contact Us</p>
+          <p href='#Donations'>Donations</p>
         </div>
       </div>
       <div className='sepp__navbar-sign'>

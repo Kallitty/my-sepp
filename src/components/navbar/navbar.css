@@ -54,4 +54,6 @@
   border-radius: 5px;
   font-family: var(--font-family);
   cursor: pointer;
+  border: 0;
+  outline: none;
 }
