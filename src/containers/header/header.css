@@ -1,0 +1,13 @@
+.sepp__header {
+  display: flex;
+}
+
+.sepp__header-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  margin-right: 5rem;
+}
