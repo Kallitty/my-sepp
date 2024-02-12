@@ -32,4 +32,8 @@
 .sepp__navbar-menu_container p {
   color: #fff;
   font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: capitalize;
 }
