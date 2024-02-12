@@ -45,11 +45,12 @@
   padding: 0.5rem 1rem;
   color: #fff;
   background: #ff4820;
-  width: 152px;
-  height: 58px;
-  left: 1153;
+  font-size: 18px;
   top: 55px;
-
+  left: 1153;
+  line-height: 25px;
+  top: 55px;
+  font-weight: 500;
   border-radius: 5px;
   font-family: var(--font-family);
   cursor: pointer;
