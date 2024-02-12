@@ -13,11 +13,14 @@ const Header = () => {
           scholarship exams. Whether you're aiming for that dream job, pursuing
           higher education opportunities, or striving for academic excellence,
           our comprehensive guide is designed to equip you with the knowledge,
-          strategies, and confidence needed to excel.{' '}
+          strategies, and confidence needed to excel.
         </p>
         <div className='sepp__header-content__input'>
           <input type='email' placeholder='Your Email Address' />
           <button type='button'>Get Started</button>
+        </div>
+        <div className='sepp__header-content__people'>
+          <img src={visited} />
         </div>
       </div>
     </div>
