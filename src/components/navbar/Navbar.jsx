@@ -54,6 +54,7 @@ const Navbar = () => {
             onClick={() => setToggleMenu(true)}
           />
         )}
+
         {toggleMenu && (
           <div className='sepp__navbar-menu_container scale-up-center'>
             <div className='sepp__navbar-menu_container-links'>
