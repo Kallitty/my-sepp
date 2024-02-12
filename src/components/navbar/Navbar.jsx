@@ -2,8 +2,27 @@ import React, { useState } from 'react'
 import './navbar.css'
 import { RiMenu3Line, RiCloseLin, RiCloseLine } from 'react-icons/ri'
 import logo from '../../assets/cutoutworld.png'
-import { useState } from 'react'
+// import { useState } from 'react'
 
+const Menu = () => (
+  <>
+    <p>
+      <a href='#home'> Home </a>
+    </p>
+    <p>
+      <a href='#About'> About SEPP </a>
+    </p>
+    <p>
+      <a href='#library'> Library</a>
+    </p>
+    <p>
+      <a href='#contactus'> Contact Us </a>
+    </p>
+    <p>
+      <a href='#donations'> Donations </a>
+    </p>
+  </>
+)
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
 
@@ -38,6 +57,11 @@ const Navbar = () => {
             size={27}
             onClick={() => setToggleMenu(true)}
           />
+        )}
+        {toggleMenu && (
+          <div className='sepp__navbar-menu_container scale-up-center'>
+            <div className='sepp__navbar-menu_container-links'></div>
+          </div>
         )}
       </div>
     </div>
