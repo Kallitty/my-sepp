@@ -21,3 +21,15 @@
   display: flex;
   flex-direction: row;
 }
+.sepp__navbar-sign {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sepp__navbar-links_container p,
+.sepp__navbar-sign p,
+.sepp__navbar-menu_container p {
+  color: #fff;
+  font-family: var(--font-family);
+}
