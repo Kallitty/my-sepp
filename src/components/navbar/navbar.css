@@ -95,4 +95,13 @@
   .sepp__navbar-links_container {
     display: none;
   }
+  .sepp__navbar-menu {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sepp__navbar {
+    padding: 2rem 4rem;
+  }
 }
