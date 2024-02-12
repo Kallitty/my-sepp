@@ -12,10 +12,10 @@ const Navbar = () => {
         </div>
         <div className='sepp__navbar-links_container'>
           <p href='#home'>Home</p>
-          <p href='#home'>About SEPP</p>
-          <p href='#home'>Donate</p>
-          <p href='#home'>News</p>
-          <p href='#home'>Library</p>
+          <p href='#About'>About SEPP</p>
+          <p href='#Donate'>Donate</p>
+          <p href='#Contactus'>Contact Us</p>
+          <p href='#Library'>Library</p>
         </div>
       </div>
     </div>
