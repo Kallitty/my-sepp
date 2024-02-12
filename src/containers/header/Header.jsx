@@ -1,5 +1,7 @@
 import React from 'react'
 import './header.css'
+import visited from '../../assets/visited.png'
+import vrexam from '../../assets/vrexam.jpg'
 
 const Header = () => {
   return (
