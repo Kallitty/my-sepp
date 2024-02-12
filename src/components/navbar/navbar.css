@@ -39,3 +39,13 @@
   margin: 0 1rem;
   cursor: pointer;
 }
+
+.sepp__navbar-sign button,
+.sepp__navbar-menu_container button {
+  width: 152px;
+  height: 58px;
+  left: 1153;
+  top: 55px;
+  background: #ff4820;
+  border-radius: 5px;
+}
