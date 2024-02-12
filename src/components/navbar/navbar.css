@@ -105,3 +105,17 @@
     padding: 2rem 4rem;
   }
 }
+@media screen and (max-width: 550px) {
+  .sepp__navbar {
+    padding: 2rem;
+  }
+  .sepp__navbar-sign {
+    display: none;
+  }
+  .sepp__navbar-menu_container {
+    top: 20px;
+  }
+  .sepp__navbar-menu_container-links-sign {
+    display: block;
+  }
+}
