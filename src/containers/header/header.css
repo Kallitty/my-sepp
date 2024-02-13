@@ -67,3 +67,14 @@
   padding: 0 1rem;
   border: none;
 }
+.sepp__header-content__people {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+}
+.sepp__header-content__people img {
+  width: 200px;
+  height: 70px;
+}
