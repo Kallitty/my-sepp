@@ -1,0 +1,18 @@
+.sepp__brand {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.sepp__brand div {
+  flex: 1;
+  max-width: 120px;
+  min-width: 90px;
+  height: 80px;
+  margin: 1rem;
+  margin-left: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
