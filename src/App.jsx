@@ -3,7 +3,14 @@ import React from 'react'
 // import Exam from './Exam'
 import { Article, Brand, CTA, Feature, Navbar } from './components'
 
-import { Blog, Features, Footer, Header, Possibility, Sepp } from './containers'
+import {
+  Blog,
+  Features,
+  Footer,
+  Header,
+  Possibility,
+  Whatsepp,
+} from './containers'
 import './App.css'
 import './index.css'
 
@@ -15,7 +22,7 @@ const App = () => {
         <Header />
       </div>
       <Brand />
-      <Sepp />
+      <Whatsepp />
       <Features />
       <Possibility />
       <CTA />
