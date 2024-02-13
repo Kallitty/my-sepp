@@ -78,3 +78,13 @@
   width: 200px;
   height: 50px;
 }
+
+.sepp__header-content__people p {
+  margin-left: 0 0 0 1rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 38px;
+  color: #ffffff;
+  text-align: center;
+}
