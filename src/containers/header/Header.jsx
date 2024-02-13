@@ -25,9 +25,9 @@ const Header = () => {
           <img src={visited} alt='visitors' />
           <p> 32,448 people visited in the last 7 days</p>
         </div>
-        <div className='sepp__header-image'>
-          <img src={vrexam} alt='vrexam' />
-        </div>
+      </div>
+      <div className='sepp__header-image'>
+        <img src={vrexam} alt='vrexam' />
       </div>
     </div>
   )
