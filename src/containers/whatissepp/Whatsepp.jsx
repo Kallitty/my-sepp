@@ -27,7 +27,7 @@ const Whatsepp = () => {
           }
         />
         <Feature
-          title={'Job seekers '}
+          title={'Job Seekers '}
           text={
             'Job seekers improve their chances with tools tailored for job-related exams.'
           }
