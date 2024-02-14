@@ -9,7 +9,7 @@ const Whatsepp = () => {
         <Feature />
       </div>
       <div className='sepp__whatsepp-heading'>
-        <h1 className='gradient-text'>
+        <h1 className='gradient__text'>
           Imagine what you can achieve. Doesn't that make you smile sometimes?
         </h1>
         <p>Explore the resources...</p>
