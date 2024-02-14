@@ -1,6 +1,6 @@
 import React from 'react'
 import './whatsepp.css'
-import { Feature } from '../../components/feature/Feature'
+import Feature from '../../components/feature/Feature.jsx'
 
 const Whatsepp = () => {
   return (
@@ -13,6 +13,9 @@ const Whatsepp = () => {
           Imagine what you can achieve. Doesn't that make you smile sometimes?
         </h1>
         <p>Explore the resources...</p>
+      </div>
+      <div className='sepp__whatsepp-container'>
+        <Feature />
       </div>
     </div>
   )
