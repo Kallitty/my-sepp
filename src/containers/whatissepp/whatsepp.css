@@ -50,3 +50,11 @@
 .sepp__whatsepp-feature {
   display: flex;
 }
+
+.sepp__whatsepp-feature .sepp__features-container__feature {
+  margin: 0;
+}
+
+.sepp__whatsepp-feature .sepp__features-container__feature-text {
+  max-width: 700px;
+}
