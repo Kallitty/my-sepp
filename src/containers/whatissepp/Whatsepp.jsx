@@ -8,6 +8,12 @@ const Whatsepp = () => {
       <div className='sepp__whatsepp-feature'>
         <Feature />
       </div>
+      <div className='sepp__whatsepp-heading'>
+        <h1 className='gradient-text'>
+          Imagine what you can achieve. Doesn't that make you smile sometimes?
+        </h1>
+        <p>Explore the resources...</p>
+      </div>
     </div>
   )
 }
