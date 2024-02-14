@@ -21,13 +21,23 @@ const Whatsepp = () => {
       </div>
       <div className='sepp__whatsepp-container'>
         <Feature
-          title={'Who needs SEPP?'}
+          title={'Professionals'}
           text={
-            "Everybody, Lol. But specifically, job seekers, professionals, and students preparing for exams benefit from the SEPP app's tailored study materials, practice tests, and exam preparation resources, enhancing their chances of success. "
+            'Professionals benefit from exam preparation resources for certifications. '
           }
         />
-        <Feature />
-        <Feature />
+        <Feature
+          title={'Job seekers '}
+          text={
+            'Job seekers improve their chances with tools tailored for job-related exams.'
+          }
+        />
+        <Feature
+          title={'Students'}
+          text={
+            'Students gain access to study materials and practice tests for scholarship exams. '
+          }
+        />
       </div>
     </div>
   )
