@@ -63,15 +63,3 @@
     display: flex;
   }
 }
-
-/* seperate */
-
-@media screen and (max-width: 990px) {
-  .sepp__features {
-    flex-direction: column;
-  }
-
-  .sepp__features-heading {
-    margin: 0 0 2rem 0;
-  }
-}

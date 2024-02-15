@@ -9,7 +9,7 @@ const Whatsepp = () => {
         <Feature
           title={'Who needs SEPP?'}
           text={
-            "Everybody, Lol. But specifically, job seekers, professionals, and students preparing for exams benefit from the SEPP app's tailored study materials, practice tests, and exam preparation resources, enhancing their chances of success. "
+            "Everybody needs SEPP, Lol. But specifically, job seekers, professionals, and students preparing for exams benefit from the SEPP app's tailored study materials, practice tests, and exam preparation resources, enhancing their chances of success. "
           }
         />
       </div>
