@@ -8,7 +8,7 @@ const Feature = ({ title, text }) => {
         <div />
         <h1>{title}</h1>
       </div>
-      <div className='sepp__feature-container_feature-text'>{text}</div>
+      <div className='sepp__features-container__feature-text'>{text}</div>
     </div>
   )
 }
