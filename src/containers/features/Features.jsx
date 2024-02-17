@@ -29,7 +29,7 @@ const Features = () => {
           Your Best Career Choice Is Now, We Are Rooting For You To Succeed. You
           Need To Step In & Make It Happen.
         </h1>
-        <p> Request Early Access to Make it Happen</p>
+        <p> Request Early Access to Make it Happen...</p>
       </div>
       <div className='sepp__features-container'>
         {featueresData.map((item, index) => (
