@@ -26,8 +26,8 @@ const Features = () => {
     <div className='sepp__features section__padding' id='features'>
       <div className='sepp__features-heading'>
         <h1 className='gradient__text'>
-          Your Best Career Choice Is Now and Hope You Achieve That. You Need To
-          Step In & Make It Happen.
+          Your Best Career Choice Is Now,We Are Rooting For You To Achieve That.
+          You Need To Step In & Make It Happen.
         </h1>
         <p> Request Early Access to Make it Happen</p>
       </div>
