@@ -10,7 +10,7 @@ const Possibility = () => {
       </div>
       <div className='sepp__possibility-content'>
         <h4>Embracing the Potential of Your Mind.</h4>
-        <h1 className='gradient-text'>
+        <h1 className='gradient__text'>
           At SEPP, we believe in the incredible power of the human mind.
         </h1>
         <p>
