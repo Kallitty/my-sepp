@@ -4,7 +4,7 @@ import possibilityImage from '../../assets/mind.jpg'
 
 const Possibility = () => {
   return (
-    <div className='sepp__possibility section__padding ' id='possibility'>
+    <div className='sepp__possibility section__padding' id='possibility'>
       <div className='sepp__possibility-image'>
         <img src={possibilityImage} alt='possibilityImage' />
       </div>
