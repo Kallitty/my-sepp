@@ -21,6 +21,9 @@ const Menu = () => (
     <p>
       <a href='#donations'> Donations </a>
     </p>
+    <p>
+      <a href='#takeexam'> Take Exam </a>
+    </p>
   </>
 )
 const Navbar = () => {
