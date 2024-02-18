@@ -1,11 +1,11 @@
 import React from 'react'
 import './article.css'
 
-const Article = () => {
+const Article = ({ imgUrl }) => {
   return (
     <div className='sepp__blog-container_article'>
-      <div className='sepp__blog-contaner_article-image'>
-        <img src={imageUrl} alt=' blogImage' />
+      <div className='sepp__blog-container_article-image'>
+        <img src={imgUrl} alt=' blogImage' />
       </div>
     </div>
   )
