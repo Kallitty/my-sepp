@@ -7,10 +7,11 @@ const Article = ({ imgUrl, date, title }) => {
       <div className='sepp__blog-container_article-image'>
         <img src={imgUrl} alt=' blogImage' />
       </div>
-      <div className='sepp__blog-container_article-content'></div>
-      <p>{date}</p>
-      <h3>{title}</h3>
-      <p>Read Full Article</p>
+      <div className='sepp__blog-container_article-content'>
+        <p>{date}</p>
+        <h3>{title}</h3>
+        <p>Read Full Article</p>
+      </div>
     </div>
   )
 }

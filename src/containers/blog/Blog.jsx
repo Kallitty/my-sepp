@@ -9,16 +9,16 @@ const Blog = () => {
       <div className='sepp__blog-heading'>
         <h1 className='gradient__text'>Explore Our Blog</h1>
         <div className='sepp__blog-container'>
-          <div className='sepp__container_groupA'>
+          <div className='sepp__blog-container_groupA'>
             <Article
               imgUrl={blog_01}
               date='Nov 03, 2023'
               title='Study Tips and Strategies'
             />
           </div>
-          <div className='sepp__container_groupB'>
+          <div className='sepp__blog-container_groupB'>
             <Article
-              imgUrl={blog_02}
+              imgUrl={blog_05}
               date='Jan 14, 2024'
               title='Success Stories and Inspirations'
             />
@@ -33,7 +33,7 @@ const Blog = () => {
               title='Career Development and Advancement'
             />
             <Article
-              imgUrl={blog_05}
+              imgUrl={blog_02}
               date='Feb 18, 2024'
               title=' Community Spotlights and Events'
             />
