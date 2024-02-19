@@ -1,19 +1,20 @@
+// Navbar.jsx
 import React, { useState } from 'react'
 import './navbar.css'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 import logo from '../../assets/cutoutworld.png'
-// import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Menu = () => (
   <>
     <p>
-      <a href='#home'> Home </a>
+      <a href='/'> Home </a>
     </p>
     <p>
-      <a href='#wsepp'> About SEPP </a>
+      <a href='wsepp'> About SEPP </a>
     </p>
     <p>
-      <a href='#library'> Library</a>
+      <Link to='/library'> Library</Link>
     </p>
     <p>
       <a href='#contactus'> Contact Us </a>
@@ -26,7 +27,8 @@ const Menu = () => (
     </p>
   </>
 )
-const Navbar = () => {
+
+const Navbar = ({ hideAuth }) => {
   const [toggleMenu, setToggleMenu] = useState(false)
 
   return (
@@ -40,8 +42,12 @@ const Navbar = () => {
         </div>
       </div>
       <div className='sepp__navbar-sign'>
-        <p>Login</p>
-        <button type='button'>Sign up</button>
+        {!hideAuth && (
+          <>
+            <p>Login</p>
+            <button type='button'>Sign up</button>
+          </>
+        )}
       </div>
       <div className='sepp__navbar-menu'>
         {toggleMenu ? (
@@ -63,8 +69,12 @@ const Navbar = () => {
             <div className='sepp__navbar-menu_container-links'>
               <Menu />
               <div className='sepp__navbar-menu_container-links-sign'>
-                <p>Login</p>
-                <button type='button'>Sign up</button>
+                {!hideAuth && (
+                  <>
+                    <p>Login</p>
+                    <button type='button'>Sign up</button>
+                  </>
+                )}
               </div>
             </div>
           </div>
