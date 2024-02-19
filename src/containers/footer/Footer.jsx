@@ -18,6 +18,27 @@ const Footer = () => {
           <img src={seppFooter} alt='footerlogo' />
           <p>Pioneer Your Path to Success.</p>
         </div>
+        <div className='sepp__footer-links_div'>
+          <h4>Company</h4>
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
+          <p>FAQs</p>
+        </div>
+        <div className='sepp__footer-links_div'>
+          <h4>Career Counseling</h4>
+          <p>Study Resources</p>
+          <p>Practice Tests</p>
+          <p>Tutoring Services/Interview Tips</p>
+        </div>
+        <div className='sepp__footer-links_div'>
+          <h4>Community Support</h4>
+          <p>Discussion Forums</p>
+          <p>Charity Events</p>
+          <p>Networking Events</p>
+        </div>
+        <div className='sepp__footer-copyright'>
+          <p>© 2024 SEPP. All rights reserved.</p>
+        </div>
       </div>
     </div>
   )
