@@ -22,7 +22,6 @@ const App = () => {
         <Header />
       </div>
       <Brand />
-      <Whatsepp />
       <Features />
       <Possibility />
       <CTA />

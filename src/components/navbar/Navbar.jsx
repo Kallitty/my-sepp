@@ -34,9 +34,9 @@ const Navbar = ({ hideAuth }) => {
   return (
     <div className='sepp__navbar'>
       <div className='sepp__navbar-links'>
-        <div className='sepp__navbar-links_logo'>
+        <Link to='/' className='sepp__navbar-links_logo'>
           <img src={logo} alt='logo' />
-        </div>
+        </Link>
         <div className='sepp__navbar-links_container'>
           <Menu />
         </div>

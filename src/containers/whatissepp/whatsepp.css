@@ -1,14 +1,13 @@
-#animation {
+/* #animation {
   z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* object-fit: cover; */
-}
-
-.sepp__whatsepp {
+  object-fit: cover;
+ } */
+*/ .sepp__whatsepp {
   display: flex;
   flex-direction: column;
   padding: 2rem;

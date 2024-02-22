@@ -1,6 +1,7 @@
 import React from 'react'
 import './whatsepp.css'
 import Feature from '../../components/feature/Feature.jsx'
+import Footer from '../../containers/footer/Footer.jsx'
 import { NavbarWithAuth } from '../../components'
 import Lottie from 'lottie-react'
 import animationData from '../../assets/sepp-animation.json'
@@ -10,7 +11,7 @@ const Whatsepp = () => {
     <>
       <NavbarWithAuth />
       <div className='min-h-screen flex items-center justify-center lg:mx-48 text-white'>
-        <Lottie animationData={animationData} id='animation' />
+        {/* <Lottie animationData={animationData} id='animation' /> */}
         <div className='sepp__whatsepp section__margin' id='wsepp'>
           <div className='sepp__whatsepp-feature'>
             <Feature
@@ -49,6 +50,7 @@ const Whatsepp = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
