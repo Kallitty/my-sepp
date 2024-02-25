@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
 // import Exam from './Exam.jsx'
+import ParticleBackground from './containers/particle-js/ParticleBackground.jsx'
 import './index.css'
 import Library from './containers/library/Library.jsx'
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
@@ -11,16 +12,20 @@ import { Whatsepp } from './containers/index.js'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <ParticleBackground />,
   },
-  {
-    path: '/library',
-    element: <Library />,
-  },
-  {
-    path: '/wsepp',
-    element: <Whatsepp />,
-  },
+  // {
+  //   path: '/',
+  //   element: <App />,
+  // },
+  // {
+  //   path: '/library',
+  //   element: <Library />,
+  // },
+  // {
+  //   path: '/wsepp',
+  //   element: <Whatsepp />,
+  // },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

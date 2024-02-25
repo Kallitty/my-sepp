@@ -1,12 +1,19 @@
 import React from 'react'
 import { Navbar } from '../../components'
 import { NavbarWithAuth } from '../../components'
+import ParticleBackground from '../particle-js/ParticleBackground.jsx'
 
 const Library = () => {
   return (
     <div>
-      <NavbarWithAuth />
-      <div>library</div>
+      <div className='particles-container'>
+        <ParticleBackground />
+
+        <NavbarWithAuth />
+        <div>
+          <ParticleBackground>library</ParticleBackground>
+        </div>
+      </div>
     </div>
   )
 }

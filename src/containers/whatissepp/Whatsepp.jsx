@@ -10,7 +10,10 @@ const Whatsepp = () => {
   return (
     <>
       <NavbarWithAuth />
-      <div className='min-h-screen flex items-center justify-center lg:mx-48 text-white'>
+      <div
+        className='min-h-screen flex items-center justify-center lg:mx-48 text-white'
+        id='particle-js'
+      >
         {/* <Lottie animationData={animationData} id='animation' /> */}
         <div className='sepp__whatsepp section__margin' id='wsepp'>
           <div className='sepp__whatsepp-feature'>
