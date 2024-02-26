@@ -8,24 +8,29 @@ import './index.css'
 import Library from './containers/library/Library.jsx'
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
 import { Whatsepp } from './containers/index.js'
+import { Login } from './containers/index.js'
 
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <ParticleBackground />,
-  },
   // {
   //   path: '/',
-  //   element: <App />,
+  //   element: <ParticleBackground />,
   // },
-  // {
-  //   path: '/library',
-  //   element: <Library />,
-  // },
-  // {
-  //   path: '/wsepp',
-  //   element: <Whatsepp />,
-  // },
+  {
+    path: '/',
+    element: <App />,
+  },
+  {
+    path: '/library',
+    element: <Library />,
+  },
+  {
+    path: '/wsepp',
+    element: <Whatsepp />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

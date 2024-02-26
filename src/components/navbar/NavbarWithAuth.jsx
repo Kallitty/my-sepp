@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom'
 const NavbarWithAuth = () => {
   const location = useLocation()
 
-  const hideAuthPaths = ['/library', '/wsepp']
+  const hideAuthPaths = ['/library', '/wsepp', '/login']
 
   // Checks if the current location is in the array of paths where auth buttons should be hidden
   const shouldHideAuth = hideAuthPaths.includes(location.pathname)

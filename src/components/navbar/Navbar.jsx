@@ -43,9 +43,20 @@ const Navbar = ({ hideAuth }) => {
       </div>
       <div className='sepp__navbar-sign'>
         {!hideAuth && (
+          // <>
+          //   <p>Login</p>
+          //   <button type='button'>Sign up</button>
+          // </>
           <>
-            <p>Login</p>
-            <button type='button'>Sign up</button>
+            <p>
+              <Link to='/login'>Login</Link>
+            </p>
+            <button
+              type='button'
+              onClick={() => (window.location.href = '../signup/Signup.jsx')}
+            >
+              Sign up
+            </button>
           </>
         )}
       </div>
@@ -71,8 +82,17 @@ const Navbar = ({ hideAuth }) => {
               <div className='sepp__navbar-menu_container-links-sign'>
                 {!hideAuth && (
                   <>
-                    <p>Login</p>
-                    <button type='button'>Sign up</button>
+                    <p>
+                      <Link to='/login'>Login</Link>
+                    </p>
+                    <button
+                      type='button'
+                      onClick={() =>
+                        (window.location.href = '../signup/Signup.jsx')
+                      }
+                    >
+                      Sign up
+                    </button>
                   </>
                 )}
               </div>

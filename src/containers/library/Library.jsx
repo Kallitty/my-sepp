@@ -7,12 +7,8 @@ const Library = () => {
   return (
     <div>
       <div className='particles-container'>
-        <ParticleBackground />
-
         <NavbarWithAuth />
-        <div>
-          <ParticleBackground>library</ParticleBackground>
-        </div>
+        <div>library</div>
       </div>
     </div>
   )
