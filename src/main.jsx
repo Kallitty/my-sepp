@@ -9,6 +9,7 @@ import Library from './containers/library/Library.jsx'
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
 import { Whatsepp } from './containers/index.js'
 import { Login } from './containers/index.js'
+import { Signup } from './containers/index.js'
 
 const router = createBrowserRouter([
   // {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />,
+  },
+  {
+    path: '/signup',
+    element: <Signup />,
   },
 ])
 

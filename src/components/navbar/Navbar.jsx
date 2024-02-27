@@ -53,7 +53,7 @@ const Navbar = ({ hideAuth }) => {
             </p>
             <button
               type='button'
-              onClick={() => (window.location.href = '../signup/Signup.jsx')}
+              onClick={() => (window.location.href = '/signup')}
             >
               Sign up
             </button>
@@ -87,9 +87,7 @@ const Navbar = ({ hideAuth }) => {
                     </p>
                     <button
                       type='button'
-                      onClick={() =>
-                        (window.location.href = '../signup/Signup.jsx')
-                      }
+                      onClick={() => (window.location.href = '/signup')}
                     >
                       Sign up
                     </button>

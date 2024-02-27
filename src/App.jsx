@@ -1,7 +1,7 @@
 import React from 'react'
 
 // import Exam from './Exam'
-import { Article, Brand, CTA, Feature, Navbar, Login } from './components'
+import { Article, Brand, CTA, Feature, Navbar } from './components'
 
 import {
   Blog,
@@ -10,6 +10,7 @@ import {
   Header,
   Possibility,
   Whatsepp,
+  Login,
 } from './containers'
 import './App.css'
 import './index.css'
