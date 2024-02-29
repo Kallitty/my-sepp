@@ -18,11 +18,12 @@ function Login() {
   return (
     <>
       <Navbar />
-      <div className='container' id=''>
-        <div className='myCard'>
+      <div className='sepp__login' id=''>
+        <div className='sepp__login-card'>
           <div className='row'>
+            {/* bootstrap css class */}
             <div className='col-md-6'>
-              <div className='myLeftCtn'>
+              <div className='sepp__login-left_container'>
                 <form className='myForm text-center'>
                   <header>Kindly Log in.</header>
 
