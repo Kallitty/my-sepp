@@ -6,32 +6,59 @@ import { Link } from 'react-router-dom'
 import './signup.scss'
 import Footer from '../footer/Footer'
 
-//
+// import { NavbarWithAuth } from '../../components'
+
 function Signup() {
   // const { isUserSignedIn, setIsUserSignedIn } = useContext(UserContext)
 
-  const handleSignUp = () => {
-    setIsUserSignedUp(true) // Set isUserSignedIn to true
+  const handleSignIn = () => {
+    setIsUserSignedIn(true) // Set isUserSignedIn to true
   }
 
   return (
     <>
       <Navbar />
-      <div className='container' id=''>
-        <div className='myCard'>
+      <div className='sepp__login' id=''>
+        <div className='sepp__login-card'>
           <div className='row'>
+            {/* bootstrap css class */}
             <div className='col-md-6'>
-              <div className='myLeftCtn'>
-                <form className='myForm text-center'>
-                  <header>Create new account</header>
+              <div className='sepp__login-left_container'>
+                <form className='sepp__login-form'>
+                  <header>CREATE AN ACCOUNT</header>
+                  {/* <small>
+                    <p>
+                      Don't have an account yet? Create your account. It's take
+                      less than 5 minutes on average.
+                    </p>
+                  </small> */}
                   <div className='form-group items'>
-                    <i className='fas fa-user'></i>
+                    <i className='fas fa-envelope'></i>
                     <input
                       className='myInput'
+                      placeholder='Last Name*'
                       type='text'
-                      placeholder='Username'
-                      id='username'
+                      id='Lastname'
                       required
+                    />
+                  </div>
+                  <div className='form-group items'>
+                    <i className='fas fa-envelope'></i>
+                    <input
+                      className='myInput'
+                      placeholder='First Name*'
+                      type='text'
+                      id='Firstname'
+                      required
+                    />
+                  </div>
+                  <div className='form-group items'>
+                    <i className='fas fa-envelope'></i>
+                    <input
+                      className='myInput'
+                      placeholder='Middle Name'
+                      type='text'
+                      id='Middlename'
                     />
                   </div>
 
@@ -39,7 +66,7 @@ function Signup() {
                     <i className='fas fa-envelope'></i>
                     <input
                       className='myInput'
-                      placeholder='Email'
+                      placeholder='Email*'
                       type='text'
                       id='email'
                       required
@@ -52,7 +79,17 @@ function Signup() {
                       className='myInput'
                       type='password'
                       id='password'
-                      placeholder='Password'
+                      placeholder='Input Password*'
+                      required
+                    />
+                  </div>
+                  <div className='form-group items'>
+                    <i className='fas fa-lock'></i>
+                    <input
+                      className='myInput'
+                      type='password'
+                      id='password'
+                      placeholder=' Confirm Password*'
                       required
                     />
                   </div>
@@ -65,7 +102,7 @@ function Signup() {
                         type='checkbox'
                         required
                       />
-                      <small> I read and agree to Terms & Conditions</small>
+                      <small> Remember me</small>
                       <div className='invalid-feedback'>
                         You must check the box.
                       </div>
@@ -74,35 +111,43 @@ function Signup() {
 
                   <input
                     type='submit'
-                    className='butt'
-                    value='Sign Up'
+                    className='button'
+                    value='Register'
                     onSubmit={handleSignIn}
                   />
-                  <Link to='/signup'>SignUp/Login</Link>
+                  <div>
+                    <a
+                      href='#'
+                      id='forget-password'
+                      style={{ textDecoration: 'underline' }}
+                    >
+                      Forgot your password?
+                    </a>
+                  </div>
+                  <div className='sepp__login-signup'>
+                    <button>
+                      <Link to='/signup'>Login here</Link>
+                    </button>
+                  </div>
                 </form>
-                <button onClick={handleSignIn}>Login Boss</button>
               </div>
             </div>
             <div className='col-md-6'>
-              <div className='myRightCtn'>
-                <div className='box'>
-                  <header>Hi Seppie!</header>
+              <div className='sepp__login-right_container'>
+                <div className='sepp__login-right_container-box'>
+                  <header>Ready to Step Up?</header>
                   <p>
-                    That's what we call you. Are you ready to take the next step
-                    in your career? Look no further than SEPP; a comprehensive
-                    online resource dedicated to preparing candidates for
-                    successful employment. <br />
-                    At SEPP, we understand the challenges and complexities of
-                    today's job market. That's why we've curated a wide range of
-                    tools, resources, and expert guidance to help you navigate
-                    every stage of the job search process with confidence and
-                    competence.
+                    You're on the brink of transforming your career, and we're
+                    thrilled to have you consider joining our community. Here at
+                    SEPP, we affectionately call our members "Seppies" — a
+                    vibrant group of ambitious individuals ready to take their
+                    careers to new heights. <br />
+                    Embrace the journey ahead with SEPP. Sign up today to start
+                    leveraging the full spectrum of opportunities we've crafted
+                    for your success. Your future is waiting, and we're here to
+                    help you seize it with confidence.
                   </p>
-                  <input
-                    type='button'
-                    className='butt_out'
-                    value='Learn More'
-                  />
+                  <input type='button' value='Learn More' />
                 </div>
               </div>
             </div>
@@ -115,3 +160,59 @@ function Signup() {
 }
 
 export default Signup
+
+// import React from 'react'
+// import { Link } from 'react-router-dom'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// // import { Button, Navbar, Nav, Container } from 'react-bootstrap'
+// // import Login from './Login.jsx'
+
+// function SignUp() {
+//   return (
+//     <div className='signup template d-flex justify-content-center align-items-center vh-100 bg-primary'>
+//       <div className='form-container p-5 rounded bg-white'>
+//         <form>
+//           <h3 className='text-center'>Sign Up</h3>
+//           <div className='mb-2'>
+//             <label htmlFor='fname'>First Name</label>
+//             <input
+//               type='text'
+//               placeholder='Enter First Name'
+//               className='form-control'
+//             />
+//           </div>
+//           <div className='mb-2'>
+//             <label htmlFor='lname'>Last Name</label>
+//             <input
+//               type='text'
+//               placeholder='Enter Last Name'
+//               className='form-control'
+//             />
+//           </div>
+//           <div className='mb-2'>
+//             <label htmlFor='password'>Password</label>
+//             <input
+//               type='password'
+//               placeholder='Enter Password'
+//               className='form-control'
+//             />
+//           </div>
+
+//           <div className='d-grid mt-2'>
+//             <Link to='/'>
+//               <button className='btn btn-primary'>Sign Up</button>
+//             </Link>
+//           </div>
+//           <p className='text-end mt-2'>
+//             Already Registered{' '}
+//             <Link to='/login' className='ms-2'>
+//               Login
+//             </Link>
+//           </p>
+//         </form>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default SignUp

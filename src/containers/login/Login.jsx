@@ -24,8 +24,8 @@ function Login() {
             {/* bootstrap css class */}
             <div className='col-md-6'>
               <div className='sepp__login-left_container'>
-                <form className='myForm text-center'>
-                  <header>Kindly Log in.</header>
+                <form className='sepp__login-form'>
+                  <header>Kindly Log in</header>
 
                   <div className='form-group items'>
                     <i className='fas fa-envelope'></i>
@@ -66,7 +66,7 @@ function Login() {
 
                   <input
                     type='submit'
-                    className='butt'
+                    className='button'
                     value='Login'
                     onSubmit={handleSignIn}
                   />
@@ -88,8 +88,8 @@ function Login() {
               </div>
             </div>
             <div className='col-md-6'>
-              <div className='myRightCtn'>
-                <div className='box'>
+              <div className='sepp__login-right_container'>
+                <div className='sepp__login-right_container-box'>
                   <header>Hi Seppie!</header>
                   <p>
                     That's what we call you. Are you ready to take the next step
@@ -102,11 +102,7 @@ function Login() {
                     every stage of the job search process with confidence and
                     competence.
                   </p>
-                  <input
-                    type='button'
-                    className='butt_out'
-                    value='Learn More'
-                  />
+                  <input type='button' value='Learn More' />
                 </div>
               </div>
             </div>
