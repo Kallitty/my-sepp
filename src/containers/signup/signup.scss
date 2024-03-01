@@ -21,13 +21,13 @@ p {
   margin: 0.5rem 0;
 }
 
-.sepp__login {
+.sepp__signup {
   max-width: 1000px;
   margin: auto;
   padding: 20px;
 }
 
-.sepp__login-card {
+.sepp__signup-card {
   position: relative;
   background: #fff;
   height: 100%;
@@ -37,7 +37,7 @@ p {
   box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
 }
 
-.sepp__login-left_container {
+.sepp__signup-left_container {
   position: relative;
   background: #fff;
   border-radius: 25px;
@@ -48,7 +48,7 @@ p {
   justify-content: center;
   align-items: center;
 }
-.sepp__login-left_container header {
+.sepp__signup-left_container header {
   color: blueviolet;
   font-size: 38px;
   font-weight: 700;
@@ -57,7 +57,7 @@ p {
 // .row {
 //   height: 100%;
 // }
-.sepp__login-left_container .myInput {
+.sepp__signup-left_container .myInput {
   width: 350px;
   border-radius: 25px;
   padding: 10px;
@@ -67,11 +67,11 @@ p {
   -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
   box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
 }
-.sepp__login-left_container .myInput:focus {
+.sepp__signup-left_container .myInput:focus {
   outline: none;
 }
 
-.sepp__login-left_container .button {
+.sepp__signup-left_container .button {
   background: linear-gradient(45deg, #4caf50, #087f23);
   color: #fff;
   width: 350px;
@@ -84,23 +84,23 @@ p {
   -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
   box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
 }
-.sepp__login-left_container .button:hover {
+.sepp__signup-left_container .button:hover {
   background: linear-gradient(45deg, #498c4b, #1aa53a);
 }
-.sepp__login-left_container .button:focus {
+.sepp__signup-left_container .button:focus {
   outline: none;
 }
-.sepp__login-left_container .fas {
+.sepp__signup-left_container .fas {
   position: relative;
   color: #47a961;
   left: 36px;
 }
 
-.sepp__login-form {
+.sepp__signup-form {
   position: relative;
   margin-top: 50px;
 }
-.sepp__login-right_container {
+.sepp__signup-right_container {
   position: relative;
   background-image: linear-gradient(45deg, #f046ff, #9b00e8);
   // background-image: url("https://images.unsplash.com/photo-1625590801433-741293b8fd18?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGxhbmRpbmclMjBwYWdlfGVufDB8fDB8fHww");
@@ -113,17 +113,17 @@ p {
   justify-content: center;
   align-items: center;
 }
-.sepp__login-right_container header {
+.sepp__signup-right_container header {
   color: #fff;
   font-size: 44px;
 }
 
-.sepp__login-right_container-box {
+.sepp__signup-right_container-box {
   position: relative;
   margin: 20px;
   margin-bottom: 100px;
 }
-.sepp__login-right_container-box input {
+.sepp__signup-right_container-box input {
   margin-top: 20px;
   background: transparent;
   color: #fff;
@@ -135,21 +135,21 @@ p {
   -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
   box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
 }
-.sepp__login-right_container-box input:hover {
+.sepp__signup-right_container-box input:hover {
   border: 2px solid#eecbff;
 }
-.sepp__login-right_container-box input:focus {
+.sepp__signup-right_container-box input:focus {
   outline: none;
 }
 .items {
   margin: 5px 0px 20px 0px;
 }
-.sepp__login-signup {
+.sepp__signup-login {
   display: flex;
   justify-content: flex-end;
 }
 
-.sepp__login-signup button {
+.sepp__signup-login button {
   background: linear-gradient(45deg, #bb36fd, #9b00e8);
   color: #fff;
   width: 220px;

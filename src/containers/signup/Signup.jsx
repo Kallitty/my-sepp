@@ -18,13 +18,13 @@ function Signup() {
   return (
     <>
       <Navbar />
-      <div className='sepp__login' id=''>
-        <div className='sepp__login-card'>
+      <div className='sepp__signup' id=''>
+        <div className='sepp__signup-card'>
           <div className='row'>
             {/* bootstrap css class */}
             <div className='col-md-6'>
-              <div className='sepp__login-left_container'>
-                <form className='sepp__login-form'>
+              <div className='sepp__signup-left_container'>
+                <form className='sepp__signup-form'>
                   <header>CREATE AN ACCOUNT</header>
                   {/* <small>
                     <p>
@@ -124,7 +124,7 @@ function Signup() {
                       Forgot your password?
                     </a>
                   </div>
-                  <div className='sepp__login-signup'>
+                  <div className='sepp__signup-login'>
                     <button>
                       <Link to='/signup'>Login here</Link>
                     </button>
@@ -133,8 +133,8 @@ function Signup() {
               </div>
             </div>
             <div className='col-md-6'>
-              <div className='sepp__login-right_container'>
-                <div className='sepp__login-right_container-box'>
+              <div className='sepp__signup-right_container'>
+                <div className='sepp__signup-right_container-box'>
                   <header>Ready to Step Up?</header>
                   <p>
                     You're on the brink of transforming your career, and we're
