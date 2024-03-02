@@ -67,6 +67,7 @@
   cursor: pointer;
 }
 .sepp__navbar-menu_container {
+  z-index: 1;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;

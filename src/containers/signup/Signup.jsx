@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom'
 import './signup.scss'
 import Footer from '../footer/Footer'
 import { useRef } from 'react'
+import { FormInput } from '../../components'
 
 // import { NavbarWithAuth } from '../../components'
-const usernameRef = useRef()
-const handleSubmit = (e) => {
-  e.preventDefault()
-}
+// const usernameRef = useRef()
+// const handleSubmit = (e) => {
+//   e.preventDefault()
+// }
 
 function Signup() {
   const handleSignIn = () => {
@@ -21,81 +22,24 @@ function Signup() {
   return (
     <>
       <Navbar />
+
       <div className='sepp__signup' id=''>
         <div className='sepp__signup-card'>
           <div className='row'>
             {/* bootstrap css class */}
             <div className='col-md-6'>
               <div className='sepp__signup-left_container'>
-                <form className='sepp__signup-form'>
+                <form action='' className='sepp__signup-form'>
                   <header>CREATE AN ACCOUNT</header>
                   {/* <small>
                     <p>
-                      Don't have an account yet? Create your account. It's take
-                      less than 5 minutes on average.
+                      It takes
+                      less than 3 minutes on an average to create an account.
                     </p>
                   </small> */}
-                  <div className='form-group items'>
-                    <i className='fas fa-envelope'></i>
-                    <input
-                      className='myInput'
-                      placeholder='Last Name*'
-                      type='text'
-                      id='Lastname'
-                      required
-                    />
-                  </div>
-                  <div className='form-group items'>
-                    <i className='fas fa-envelope'></i>
-                    <input
-                      className='myInput'
-                      placeholder='First Name*'
-                      type='text'
-                      id='Firstname'
-                      required
-                    />
-                  </div>
-                  <div className='form-group items'>
-                    <i className='fas fa-envelope'></i>
-                    <input
-                      className='myInput'
-                      placeholder='Middle Name'
-                      type='text'
-                      id='Middlename'
-                    />
-                  </div>
 
-                  <div className='form-group items'>
-                    <i className='fas fa-envelope'></i>
-                    <input
-                      className='myInput'
-                      placeholder='Email*'
-                      type='text'
-                      id='email'
-                      required
-                    />
-                  </div>
+                  <FormInput placeholder='Last Name*' />
 
-                  <div className='form-group items'>
-                    <i className='fas fa-lock'></i>
-                    <input
-                      className='myInput'
-                      type='password'
-                      id='password'
-                      placeholder='Input Password*'
-                      required
-                    />
-                  </div>
-                  <div className='form-group items'>
-                    <i className='fas fa-lock'></i>
-                    <input
-                      className='myInput'
-                      type='password'
-                      id='password'
-                      placeholder=' Confirm Password*'
-                      required
-                    />
-                  </div>
                   <div className='form-group items'>
                     <i className='fas fa-lock'></i>
                     <select
@@ -113,7 +57,7 @@ function Signup() {
 
                   <div className='form-group'>
                     <label>
-                      <small class='sepp__signup_small-text'>
+                      <small className='sepp__signup_small-text'>
                         By registering, you consent to our Terms of Service,
                         Privacy Policy, and Cookie Policy.
                       </small>
