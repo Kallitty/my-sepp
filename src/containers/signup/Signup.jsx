@@ -5,12 +5,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Link } from 'react-router-dom'
 import './signup.scss'
 import Footer from '../footer/Footer'
+import { useRef } from 'react'
 
 // import { NavbarWithAuth } from '../../components'
+const usernameRef = useRef()
+const handleSubmit = (e) => {
+  e.preventDefault()
+}
 
 function Signup() {
-  // const { isUserSignedIn, setIsUserSignedIn } = useContext(UserContext)
-
   const handleSignIn = () => {
     setIsUserSignedIn(true) // Set isUserSignedIn to true
   }
@@ -108,22 +111,25 @@ function Signup() {
                     </select>
                   </div>
 
+                  <div className='form-group'>
+                    <label>
+                      <small class='sepp__signup_small-text'>
+                        By registering, you consent to our Terms of Service,
+                        Privacy Policy, and Cookie Policy.
+                      </small>
+                    </label>
+                  </div>
+                  <br />
+
                   <input
                     type='submit'
                     className='button'
                     value='Register'
                     onSubmit={handleSignIn}
                   />
-                  <div>
-                    <a
-                      href='#'
-                      id='forget-password'
-                      style={{ textDecoration: 'underline' }}
-                    >
-                      Forgot your password?
-                    </a>
-                  </div>
+
                   <div className='sepp__signup-login'>
+                    Already registered? <br />
                     <button>
                       <Link to='/login'>Login here</Link>
                     </button>
