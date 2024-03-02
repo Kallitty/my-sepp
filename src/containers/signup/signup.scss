@@ -135,6 +135,33 @@ p {
   -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
   box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
 }
+
+//styling options
+// .form-group.items {
+//   margin: 5px 0px 20px 0px;
+
+//   .form-control {
+//     width: 350px; // Match width of other inputs
+//     border-radius: 25px; // Consistent with your input styling
+//     padding: 10px; // Consistent padding
+//     border: none; // Removing default border
+//     -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+//     -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+//     box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7); // Consistent shadow with inputs
+//     background: #fff; // Assuming a white background like the inputs
+//     color: #000; // Text color for better readability
+
+//     &:focus {
+//       outline: none; // Remove focus outline to match other input styles
+//       box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2); // Optional: add a focus state box-shadow
+//     }
+
+//     option {
+//       color: #000; // Ensuring options are readable
+//     }
+//   }
+// }
+// //ends here
 .sepp__signup-right_container-box input:hover {
   border: 2px solid#eecbff;
 }
@@ -158,15 +185,15 @@ p {
   padding: 10px;
 }
 
-.sepp__login-signup button:hover {
+.sepp__signup-login button:hover {
   background: linear-gradient(45deg, #c85bff, #b726ff);
 }
 
-.sepp__login-signup button:focus {
+.sepp__signup-login button:focus {
   outline: none;
 }
 
-.sepp__login-signup button .fas {
+.sepp__signup-login button .fas {
   position: relative;
   color: #bb36fd;
   left: 36px;

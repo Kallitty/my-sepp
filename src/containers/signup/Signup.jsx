@@ -93,20 +93,19 @@ function Signup() {
                       required
                     />
                   </div>
-
-                  <div className='form-group'>
-                    <label>
-                      <input
-                        id='check_1'
-                        name='check_1'
-                        type='checkbox'
-                        required
-                      />
-                      <small> Remember me</small>
-                      <div className='invalid-feedback'>
-                        You must check the box.
-                      </div>
-                    </label>
+                  <div className='form-group items'>
+                    <i className='fas fa-lock'></i>
+                    <select
+                      className='myInput'
+                      name='role'
+                      id='user_type'
+                      // className='form-control ca-check-plan valid'
+                      required
+                    >
+                      <option value=''>Gender*</option>
+                      <option value='Male'>Male</option>
+                      <option value='Female'>Female</option>
+                    </select>
                   </div>
 
                   <input
@@ -126,7 +125,7 @@ function Signup() {
                   </div>
                   <div className='sepp__signup-login'>
                     <button>
-                      <Link to='/signup'>Login here</Link>
+                      <Link to='/login'>Login here</Link>
                     </button>
                   </div>
                 </form>
@@ -160,59 +159,3 @@ function Signup() {
 }
 
 export default Signup
-
-// import React from 'react'
-// import { Link } from 'react-router-dom'
-// import 'bootstrap/dist/css/bootstrap.min.css'
-// // import { Button, Navbar, Nav, Container } from 'react-bootstrap'
-// // import Login from './Login.jsx'
-
-// function SignUp() {
-//   return (
-//     <div className='signup template d-flex justify-content-center align-items-center vh-100 bg-primary'>
-//       <div className='form-container p-5 rounded bg-white'>
-//         <form>
-//           <h3 className='text-center'>Sign Up</h3>
-//           <div className='mb-2'>
-//             <label htmlFor='fname'>First Name</label>
-//             <input
-//               type='text'
-//               placeholder='Enter First Name'
-//               className='form-control'
-//             />
-//           </div>
-//           <div className='mb-2'>
-//             <label htmlFor='lname'>Last Name</label>
-//             <input
-//               type='text'
-//               placeholder='Enter Last Name'
-//               className='form-control'
-//             />
-//           </div>
-//           <div className='mb-2'>
-//             <label htmlFor='password'>Password</label>
-//             <input
-//               type='password'
-//               placeholder='Enter Password'
-//               className='form-control'
-//             />
-//           </div>
-
-//           <div className='d-grid mt-2'>
-//             <Link to='/'>
-//               <button className='btn btn-primary'>Sign Up</button>
-//             </Link>
-//           </div>
-//           <p className='text-end mt-2'>
-//             Already Registered{' '}
-//             <Link to='/login' className='ms-2'>
-//               Login
-//             </Link>
-//           </p>
-//         </form>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default SignUp
