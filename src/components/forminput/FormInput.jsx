@@ -1,17 +1,15 @@
 import React from 'react'
+import './forminput.css'
 import '../../containers/signup/signup.scss'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 
-const FormInput = () => {
+const FormInput = (props) => {
+  const { label, errorMessage, onChange, id, ...inputProps } = props
   return (
-    <div className='form-group items'>
-      <i className='fas fa-envelope'></i>
-      <input
-        className='myInput'
-        type='text'
-        id='Lastname'
-        // placeholder={}
-        // required
-      />
+    <div>
+      <label>{label}</label>
+      <input {...inputProps} onChange={onChange} />
+      <span className='sepp__forminput_span'>{errorMessage}</span>
     </div>
   )
 }

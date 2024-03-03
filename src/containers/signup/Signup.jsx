@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useState } from 'react'
 import { Navbar } from '../../components'
 import UserContext from '../login/UserContext'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -9,16 +10,89 @@ import { useRef } from 'react'
 import { FormInput } from '../../components'
 
 // import { NavbarWithAuth } from '../../components'
-// const usernameRef = useRef()
-// const handleSubmit = (e) => {
-//   e.preventDefault()
-// }
 
 function Signup() {
-  const handleSignIn = () => {
-    setIsUserSignedIn(true) // Set isUserSignedIn to true
+  const [values, setValues] = useState({
+    lastname: '',
+    firstname: '',
+    email: '',
+    password: '',
+    confirmpassword: '',
+    gender: '',
+  })
+  const inputs = [
+    {
+      id: 1,
+      label: 'Lastname',
+      name: 'lastname',
+      type: 'text',
+      placeholder: 'Lastname',
+      errorMessage:
+        'Lastname should be 3-16 characters and should not include any special character.',
+      required: true,
+      // pattern: '^[A-Za-z0-9]{3,16}$', for username
+      pattern: '^[A-Za-z]{3,16}$',
+    },
+    {
+      id: 2,
+      label: 'Firstname',
+      name: 'firstname',
+      type: 'text',
+      placeholder: 'Firstname',
+      errorMessage:
+        'Firstname should be 3-16 characters and should not include any special character.',
+      required: true,
+      pattern: '^[A-Za-z]{3,16}$',
+    },
+    {
+      id: 3,
+      label: 'Email',
+      name: 'email',
+      type: 'email',
+      placeholder: 'Email',
+      errorMessage: 'Email should be a valid email address',
+      required: true,
+    },
+    {
+      id: 4,
+      label: 'Input Password',
+      name: 'password',
+      type: 'password',
+      placeholder: 'Input Password',
+      errorMessage:
+        'Password should be 8-20 characters and should include at least 1 letter, 1 number and 1 special character.',
+      required: true,
+      pattern: '^(?=.*[A-Za-z])(?=.*d)(?=.*[W_])[A-Za-zdW_]{8,20}$',
+    },
+    {
+      id: 5,
+      label: 'Confirm Password',
+      name: 'confirmpassword',
+      type: 'password',
+      placeholder: 'Confirm Password',
+      errorMessage: 'Password does not match!',
+      required: true,
+    },
+    {
+      id: 6,
+      label: 'Date of Birth',
+      name: 'date',
+      type: 'date',
+      placeholder: 'Date of Birth',
+      errorMessage: '',
+    },
+  ]
+  const handleSubmit = (e) => {
+    e.preventDefault()
   }
 
+  const onChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value })
+  }
+  // const handleSignIn = () => {
+  //   setIsUserSignedIn(true) // Set isUserSignedIn to true
+  // }
+  console.log(values)
   return (
     <>
       <Navbar />
@@ -29,7 +103,11 @@ function Signup() {
             {/* bootstrap css class */}
             <div className='col-md-6'>
               <div className='sepp__signup-left_container'>
-                <form action='' className='sepp__signup-form'>
+                <form
+                  // onSubmit={handleSubmit}
+                  // action=''
+                  className='sepp__signup-form'
+                >
                   <header>CREATE AN ACCOUNT</header>
                   {/* <small>
                     <p>
@@ -37,17 +115,33 @@ function Signup() {
                       less than 3 minutes on an average to create an account.
                     </p>
                   </small> */}
-
-                  <FormInput placeholder='Last Name*' />
+                  <div className='form-group items'>
+                    <i className='fas fa-envelope'></i>
+                    {inputs.map((input) => (
+                      <FormInput
+                        key={input.id}
+                        {...input}
+                        value={values[input.name]}
+                        onChange={onChange}
+                      />
+                    ))}
+                  </div>
+                  {/* <FormInput name='lastname' placeholder='Last Name*' />
+                  <FormInput name='firstname' placeholder='First Name*' />
+                  <FormInput name='email' placeholder='Email*' />
+                  <FormInput name='password' placeholder='Input Password*' />
+                  <FormInput
+                    name='confirmpassword'
+                    placeholder='Confirm Password*'
+                  /> */}
 
                   <div className='form-group items'>
                     <i className='fas fa-lock'></i>
                     <select
                       className='myInput'
-                      name='role'
+                      name='gender'
                       id='user_type'
                       // className='form-control ca-check-plan valid'
-                      required
                     >
                       <option value=''>Gender*</option>
                       <option value='Male'>Male</option>
@@ -69,7 +163,7 @@ function Signup() {
                     type='submit'
                     className='button'
                     value='Register'
-                    onSubmit={handleSignIn}
+                    onSubmit={handleSubmit}
                   />
 
                   <div className='sepp__signup-login'>

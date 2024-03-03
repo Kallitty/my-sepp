@@ -1,0 +1,14 @@
+label {
+  font-size: 10px;
+  color: rgb(161, 158, 158);
+}
+
+.sepp__forminput_span {
+  font-size: 8px;
+  padding: 2px;
+  color: red;
+  display: none;
+}
+input:invalid ~ .sepp__forminput_span {
+  display: block;
+}

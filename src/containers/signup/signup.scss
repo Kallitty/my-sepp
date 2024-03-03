@@ -48,6 +48,7 @@ p {
   justify-content: center;
   align-items: center;
 }
+
 .sepp__signup-left_container header {
   color: blueviolet;
   font-size: 38px;
@@ -100,6 +101,7 @@ p {
   position: relative;
   margin-top: 50px;
 }
+
 .sepp__signup-right_container {
   position: relative;
   background-image: linear-gradient(45deg, #f046ff, #9b00e8);
@@ -136,32 +138,6 @@ p {
   box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
 }
 
-//styling options
-// .form-group.items {
-//   margin: 5px 0px 20px 0px;
-
-//   .form-control {
-//     width: 350px; // Match width of other inputs
-//     border-radius: 25px; // Consistent with your input styling
-//     padding: 10px; // Consistent padding
-//     border: none; // Removing default border
-//     -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
-//     -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
-//     box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7); // Consistent shadow with inputs
-//     background: #fff; // Assuming a white background like the inputs
-//     color: #000; // Text color for better readability
-
-//     &:focus {
-//       outline: none; // Remove focus outline to match other input styles
-//       box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2); // Optional: add a focus state box-shadow
-//     }
-
-//     option {
-//       color: #000; // Ensuring options are readable
-//     }
-//   }
-// }
-// //ends here
 .sepp__signup_small-text {
   font-size: 10px;
   line-height: 1.1;
