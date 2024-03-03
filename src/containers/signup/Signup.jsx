@@ -62,7 +62,8 @@ function Signup() {
       errorMessage:
         'Password should be 8-20 characters and should include at least 1 letter, 1 number and 1 special character.',
       required: true,
-      pattern: '^(?=.*[A-Za-z])(?=.*d)(?=.*[W_])[A-Za-zdW_]{8,20}$',
+      pattern:
+        '^(?=.*[A-Za-z])(?=.*d)(?=.*[!@#$%^&*()_+{}[]:;<>,.?/~`-])[A-Za-zd!@#$%^&*()_+{}[]:;<>,.?/~`-]{8,20}$',
     },
     {
       id: 5,
