@@ -29,9 +29,9 @@ function Signup() {
       placeholder: 'Lastname',
       errorMessage:
         'Lastname should be 3-16 characters and should not include any special character.',
+      pattern: '^[A-Za-z]{3,16}$',
       required: true,
       // pattern: '^[A-Za-z0-9]{3,16}$', for username
-      pattern: '^[A-Za-z]{3,16}$',
     },
     {
       id: 2,
@@ -41,8 +41,8 @@ function Signup() {
       placeholder: 'Firstname',
       errorMessage:
         'Firstname should be 3-16 characters and should not include any special character.',
-      required: true,
       pattern: '^[A-Za-z]{3,16}$',
+      required: true,
     },
     {
       id: 3,
@@ -60,10 +60,12 @@ function Signup() {
       type: 'password',
       placeholder: 'Input Password',
       errorMessage:
-        'Password should be 8-20 characters and should include at least 1 letter, 1 number and 1 special character.',
-      required: true,
+        'Password should be 8-20 characters, include at least 1 letter, 1 number and 1 special character.',
       pattern:
-        '^(?=.*[A-Za-z])(?=.*d)(?=.*[!@#$%^&*()_+{}[]:;<>,.?/~`-])[A-Za-zd!@#$%^&*()_+{}[]:;<>,.?/~`-]{8,20}$',
+        '^(?=.*[0-9](?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$',
+      // ^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,20}$
+
+      required: true,
     },
     {
       id: 5,
@@ -72,6 +74,7 @@ function Signup() {
       type: 'password',
       placeholder: 'Confirm Password',
       errorMessage: 'Password does not match!',
+      pattern: values.password,
       required: true,
     },
     {
@@ -138,6 +141,7 @@ function Signup() {
 
                   <div className='form-group items'>
                     <i className='fas fa-lock'></i>
+                    <label className=''>Gender</label>
                     <select
                       className='myInput'
                       name='gender'

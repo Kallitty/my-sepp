@@ -1,6 +1,10 @@
 label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   font-size: 10px;
-  color: rgb(161, 158, 158);
+  color: rgb(75, 71, 71);
+  padding-left: 10px;
 }
 
 .sepp__forminput_span {
@@ -8,6 +12,7 @@ label {
   padding: 2px;
   color: red;
   display: none;
+  padding-left: 10px;
 }
 input:invalid ~ .sepp__forminput_span {
   display: block;
