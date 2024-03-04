@@ -1,4 +1,5 @@
 import React from 'react'
+import './sidebar.scss'
 import {
   BiBookAlt,
   BiHome,
@@ -13,37 +14,38 @@ import { DiAptana } from 'react-icons/di'
 const Sidebar = () => {
   return (
     <div className='sepp__sidebar-left__menu'>
-      <div className='sepp__sidebar-left__menu {'>
-        <BiBookAlt className='sepp__sidebar-left__icons' />
+      <div className='sepp__sidebar-left-menu--logo'>
+        <BiBookAlt className='sepp__sidebar-left__logo-icon' />
         <h2>My SEPP</h2>
       </div>
-      <div className='menu--list'>
-        <a href='#' className='sepp__sidebar-left__anchor'>
-          <BiHome className='sepp__sidebar-left__icons' />
+
+      <div className='sepp__sidebar-left-menu--list'>
+        <a href='#' className='sepp__sidebar-left__items'>
+          <BiHome className='sepp__sidebar-left__icon' />
           Dashboard
         </a>
-        <a href='#' className='sepp__sidebar-left__anchor'>
-          <BiSolidReport className='sepp__sidebar-left__icons' />
+        <a href='#' className='sepp__sidebar-left__items'>
+          <BiSolidReport className='sepp__sidebar-left__icon' />
           Results
         </a>
-        <a href='#' className='sepp__sidebar-left__anchor'>
-          <BiFolder className='sepp__sidebar-left__icons' />
+        <a href='#' className='sepp__sidebar-left__items'>
+          <BiFolder className='sepp__sidebar-left__icon' />
           Report card
         </a>
-        <a href='#' className='sepp__sidebar-left__anchor'>
-          <BiStats className='sepp__sidebar-left__icons' />
+        <a href='#' className='sepp__sidebar-left__items'>
+          <BiStats className='sepp__sidebar-left__icon' />
           Stats
         </a>
-        <a href='#' className='sepp__sidebar-left__anchor'>
-          <BiMessage className='sepp__sidebar-left__icons' />
+        <a href='#' className='sepp__sidebar-left__items'>
+          <BiMessage className='sepp__sidebar-left__icon' />
           Message
         </a>
-        <a href='#' className='sepp__sidebar-left__anchor'>
-          <BiTask className='sepp__sidebar-left__icons' />
+        <a href='#' className='sepp__sidebar-left__items'>
+          <BiTask className='sepp__sidebar-left__icon' />
           Help
         </a>
-        <a href='#' className='sepp__sidebar-left__anchor'>
-          <DiAptana className='sepp__sidebar-left__icons' />
+        <a href='#' className='sepp__sidebar-left__items'>
+          <DiAptana className='sepp__sidebar-left__icon' />
           Settings
         </a>
       </div>
