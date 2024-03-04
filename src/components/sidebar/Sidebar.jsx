@@ -1,10 +1,26 @@
 import React from 'react'
-import { BiHome } from 'react-icons/bi'
+import {
+  BiBookAlt,
+  BiHome,
+  BiMessage,
+  BiSolidReport,
+  BiStats,
+  BiTask,
+} from 'react-icons/bi'
 
 const Sidebar = () => {
   return (
-    <div className='sepp__sidebar-menu'>
-      <div className='sepp__sidebar-menu__logo'></div>
+    <div className='menu'>
+      <div className='logo'>
+        <BiBookAlt />
+        <h2>Welcome to Sepp</h2>
+      </div>
+      <div className='menu--list'>
+        <a href='#' className='item'>
+          <BiHome />
+          Dashboard
+        </a>
+      </div>
     </div>
   )
 }

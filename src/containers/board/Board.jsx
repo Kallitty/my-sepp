@@ -1,5 +1,5 @@
 import React from 'react'
-import './board.css'
+import './board.scss'
 import { Sidebar } from '../../components/'
 const Board = () => {
   return (
