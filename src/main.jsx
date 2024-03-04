@@ -10,6 +10,7 @@ import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
 import { Whatsepp } from './containers/index.js'
 import { Login } from './containers/index.js'
 import { Signup } from './containers/index.js'
+import { Board } from './containers/index.js'
 
 const router = createBrowserRouter([
   // {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <Signup />,
+  },
+  {
+    path: '/board',
+    element: <Board />,
   },
 ])
 
