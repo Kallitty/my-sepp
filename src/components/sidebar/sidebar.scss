@@ -35,5 +35,10 @@
   padding: 10px;
   border-radius: 10px;
   transition: 0.3s ease-in-out;
-  color: #27374d;
+  color: #531340;
+}
+
+.sepp__sidebar-left-menu--list .sepp__sidebar-left__items:hover {
+  background: #531340;
+  color: rgb(232, 208, 238);
 }
