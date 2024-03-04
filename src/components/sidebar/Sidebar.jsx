@@ -5,7 +5,9 @@ import {
   BiMessage,
   BiSolidReport,
   BiStats,
+  BiFolder,
   BiTask,
+  BiSettings,
 } from 'react-icons/bi'
 
 const Sidebar = () => {
@@ -19,6 +21,30 @@ const Sidebar = () => {
         <a href='#' className='item'>
           <BiHome />
           Dashboard
+        </a>
+        <a href='#' className='item'>
+          <BiStats />
+          Results
+        </a>
+        <a href='#' className='item'>
+          <BiFolder />
+          Report card
+        </a>
+        <a href='#' className='item'>
+          <BiStats />
+          Stats
+        </a>
+        <a href='#' className='item'>
+          <BiMessage />
+          Message
+        </a>
+        <a href='#' className='item'>
+          <BiTask />
+          Help
+        </a>
+        <a href='#' className='item'>
+          <BiSettings />
+          Settings
         </a>
       </div>
     </div>
