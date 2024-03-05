@@ -1,3 +1,9 @@
 .sepp__board {
+  display: flex;
   padding: 2rem;
+  gap: 20px;
+}
+.sepp__board--content {
+  background: #ffff;
+  flex: 1;
 }
