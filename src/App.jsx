@@ -1,7 +1,16 @@
 import React from 'react'
 
 // import Exam from './Exam'
-import { Article, Brand, CTA, Feature, Navbar, FormInput } from './components'
+import {
+  Article,
+  Brand,
+  CTA,
+  Feature,
+  Navbar,
+  FormInput,
+  Content,
+  Profile,
+} from './components'
 
 import {
   Blog,
