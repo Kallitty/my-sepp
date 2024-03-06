@@ -1,4 +1,5 @@
 import React from 'react'
+import './contentheader.scss'
 import { BiSearch, BiNotification } from 'react-icons/bi'
 
 const ContentHeader = () => {
