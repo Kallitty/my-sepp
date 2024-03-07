@@ -42,9 +42,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.sepp__content--header-notify .sepp__content--header-icon {
+  font-size: 20px;
   transition: 0.5s ease-in-out;
 }
-
 .sepp__content--header-icon:hover {
   transform: scale(1.3);
   cursor: pointer;
