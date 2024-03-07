@@ -1,0 +1,10 @@
+.sepp__card-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 2rem;
+}
+.sepp__card {
+  flex: 1;
+  background: rgb(232, 208, 238);
+}
