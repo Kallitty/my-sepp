@@ -1,3 +1,3 @@
-import Profil from '../../assets/mind.jpg'
+import Profil from '../../assets/psalm.jpg'
 
 export { Profil }

@@ -3,9 +3,9 @@ import './tutorlist.scss'
 import { Profil } from './importtl.js'
 
 const tutors = [
-  { image: Profil, name: 'Dr U. Psalms', duration: '6 hours', cost: '99.90' },
+  { image: Profil, name: 'Dr U. Psalm', duration: '6 hours', cost: '24.90' },
 
-  { image: 'Image45', name: 'Prof M. Edu', duration: '4 hours', cost: '99.80' },
+  { image: 'Image45', name: 'Prof M. Edu', duration: '4 hours', cost: '27.80' },
 ]
 
 const TutorList = () => {
@@ -27,8 +27,8 @@ const TutorList = () => {
               <h2>{tutor.name}</h2>
             </div>
             <span>{tutor.duration}</span>
-            <span>{tutor.cost}</span>
-            <span className='sepp__tutorlist--tutor-todo'>:</span>
+            <span>${tutor.cost}/hr</span>
+            <span className='sepp__tutorlist--tutor-todo'>|</span>
           </div>
         ))}
       </div>
