@@ -1,0 +1,15 @@
+.sepp__tutorlist--header {
+  display: flex;
+  margin: 2rem 0;
+  justify-content: space-between;
+}
+.sepp__tutorlist--header h2 {
+  color: #2c0326;
+}
+.sepp__tutorlist--header select {
+  border-radius: 10px;
+  border: none;
+  padding: 8px 12px;
+  border: 1px solid #f1d2eb;
+  color: #2c0326;
+}
