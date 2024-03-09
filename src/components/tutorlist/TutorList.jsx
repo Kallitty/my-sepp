@@ -6,6 +6,18 @@ const tutors = [
   { image: Profil, name: 'Dr U. Psalm', duration: '6 hours', cost: '24.90' },
 
   { image: 'Image45', name: 'Prof M. Edu', duration: '4 hours', cost: '27.80' },
+  {
+    image: 'Image5',
+    name: 'Mrs M. Cath',
+    duration: '4.5 hours',
+    cost: '25.80',
+  },
+  {
+    image: 'Image85',
+    name: 'Prof C. Mia',
+    duration: '4 hours',
+    cost: '27.80',
+  },
 ]
 
 const TutorList = () => {
@@ -24,7 +36,7 @@ const TutorList = () => {
           <div className='sepp__tutorlist--list'>
             <div className='sepp__tutorlist--tutor-detail'>
               <img src={tutor.image} alt={tutor.name} />
-              <h2>{tutor.name}</h2>
+              <h4>{tutor.name}</h4>
             </div>
             <span>{tutor.duration}</span>
             <span>${tutor.cost}/hr</span>
