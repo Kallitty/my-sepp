@@ -1,0 +1,22 @@
+.sepp__profileheader--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sepp__profileheader-edit {
+  background: #eadded;
+  padding: 12px;
+  border-radius: 10px;
+  color: #470647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sepp__profileheader-edit .sepp__profileheader-icon {
+  font-size: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+// .sepp__profileheader--title {
+// }
