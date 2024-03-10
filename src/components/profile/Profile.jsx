@@ -5,12 +5,12 @@ import { Profil } from './importp.js'
 import { BiBook } from 'react-icons/bi'
 
 const quizes = [
-  { title: 'Quiz 1', duration: '1 Hour(s)', icon: <BiBook /> },
-  { title: 'Quiz 2', duration: '1 Hour(s)', icon: <BiBook /> },
-  { title: 'Quiz 3', duration: '1 Hour(s)', icon: <BiBook /> },
-  { title: 'Quiz 4', duration: '1 Hour(s)', icon: <BiBook /> },
-  { title: 'Quiz 5', duration: '1 Hour(s)', icon: <BiBook /> },
-  { title: 'Quiz 6', duration: '1 Hour(s)', icon: <BiBook /> },
+  { title: 'Quiz 1', duration: '1 Hour', icon: <BiBook /> },
+  { title: 'Quiz 2', duration: '1 Hour', icon: <BiBook /> },
+  { title: 'Quiz 3', duration: '1 Hour', icon: <BiBook /> },
+  { title: 'Quiz 4', duration: '1 Hour', icon: <BiBook /> },
+  { title: 'Quiz 5', duration: '1 Hour', icon: <BiBook /> },
+  { title: 'Quiz 6', duration: '1 Hour', icon: <BiBook /> },
 ]
 
 const Profile = () => {
