@@ -20,8 +20,49 @@
 .sepp__profile-user--detail img {
   background: #fff;
   border-radius: 50%;
+  width: 120px;
+  height: 125px;
+}
+
+.sepp__profile-user--detail .sepp__profile-username {
+  font-weight: 600;
+  color: #470647;
+  margin-top: -3px;
+}
+.sepp__profile-category {
+  color: #470647;
+  margin-top: -10px;
+}
+
+.sepp__profile-quizes {
+  background: #fff;
+}
+.sepp__profile-quiz__quiz {
+  background: #eadded;
+  padding: 10px;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.sepp__profile-quiz--detail {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.sepp__profile-quiz--icon {
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  display: flex;
+}
+.sepp__profile-quiz--name {
+}
+.sepp__profile-quiz--title {
+}
+.sepp__profile-quiz--duration {
+}
+.sepp__profile-quiz--action {
+  color: #470647;
 }
