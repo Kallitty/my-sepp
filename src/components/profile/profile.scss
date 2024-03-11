@@ -36,8 +36,6 @@
 
 //other segment
 .sepp__profile-quizes {
-  // background: #eadded;
-  // padding: 20px;
   background: #fff;
 }
 .sepp__profile-quiz__quiz {
@@ -49,6 +47,7 @@
   border-radius: 10px;
   margin-top: 10px;
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 .sepp__profile-quiz--detail {
   display: flex;

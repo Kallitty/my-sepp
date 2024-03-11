@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.sepp__profileheader-edit {
+.sepp__profileheader--edit {
   background: #eadded;
   padding: 12px;
   border-radius: 10px;
@@ -13,9 +13,10 @@
   justify-content: center;
 }
 
-.sepp__profileheader-edit .sepp__profileheader-icon {
+.sepp__profileheader--edit .sepp__profileheader--icon {
   font-size: 20px;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .sepp__profileheader--title {

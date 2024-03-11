@@ -1,4 +1,7 @@
 .sepp__sidebar-grand {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 1rem;
   background: #ecd3e8;
   margin: 0;
@@ -55,4 +58,9 @@
 .sepp__sidebar-left-menu--list .sepp__sidebar-left__items:hover {
   background: #470647;
   color: rgb(232, 208, 238);
+}
+
+.sepp__sidebar-left__logout {
+  padding: 10px 0; // Adjust padding as needed
+  text-align: left; // Center the content
 }

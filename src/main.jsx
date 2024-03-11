@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
-// import Exam from './Exam.jsx'
+import Exam from './Exam.jsx'
 import ParticleBackground from './containers/particle-js/ParticleBackground.jsx'
 import './index.css'
 import Library from './containers/library/Library.jsx'
@@ -40,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: '/board',
     element: <Board />,
+  },
+  {
+    path: '/exam/1',
+    element: <Exam />,
   },
 ])
 

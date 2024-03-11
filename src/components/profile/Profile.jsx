@@ -3,14 +3,15 @@ import './profile.scss'
 import ProfileHeader from '../profileheader/ProfileHeader'
 import { Profil } from './importp.js'
 import { BiBook } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 
 const quizes = [
-  { title: 'Quiz 1', duration: '1 Hour', icon: <BiBook /> },
-  { title: 'Quiz 2', duration: '1 Hour', icon: <BiBook /> },
-  { title: 'Quiz 3', duration: '1 Hour', icon: <BiBook /> },
-  { title: 'Quiz 4', duration: '1 Hour', icon: <BiBook /> },
-  { title: 'Quiz 5', duration: '1 Hour', icon: <BiBook /> },
-  { title: 'Quiz 6', duration: '1 Hour', icon: <BiBook /> },
+  { title: 'Quiz 1', duration: '1 Hour', icon: <BiBook />, link: '/exam/1' },
+  { title: 'Quiz 2', duration: '1 Hour', icon: <BiBook />, link: '/exam/2' },
+  { title: 'Quiz 3', duration: '1 Hour', icon: <BiBook />, link: '/exam3/' },
+  { title: 'Quiz 4', duration: '1 Hour', icon: <BiBook />, link: '/exam/4' },
+  { title: 'Quiz 5', duration: '1 Hour', icon: <BiBook />, link: '/exam/5' },
+  { title: 'Quiz 6', duration: '1 Hour', icon: <BiBook />, link: '/exam/6' },
 ]
 
 const Profile = () => {
@@ -24,8 +25,12 @@ const Profile = () => {
           <span className='sepp__profile-category'>(Potential Hire)</span>
         </div>
         <div className='sepp__profile-quizes'>
-          {quizes.map((quiz) => (
-            <div className='sepp__profile-quiz__quiz'>
+          {quizes.map((quiz, index) => (
+            <Link
+              to={`/exam/${index + 1}`}
+              className='sepp__profile-quiz__quiz'
+              key={index}
+            >
               <div className='sepp__profile-quiz--detail'>
                 <div className='sepp__profile-quiz--icon'>{quiz.icon}</div>
                 <div className='sepp__profile-quiz--name'>
@@ -36,7 +41,7 @@ const Profile = () => {
                 </div>
               </div>
               <div className='sepp__profile-quiz--action'>|</div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

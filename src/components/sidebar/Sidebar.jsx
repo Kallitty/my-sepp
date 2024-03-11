@@ -8,6 +8,7 @@ import {
   BiStats,
   BiFolder,
   BiTask,
+  BiLogOut,
 } from 'react-icons/bi'
 import { DiAptana } from 'react-icons/di'
 
@@ -51,6 +52,10 @@ const Sidebar = () => {
           </a>
         </div>
       </div>
+      <a href='#' className='sepp__sidebar-left__logout'>
+        <BiLogOut className='sepp__sidebar-left__logouticon' />
+        Logout
+      </a>
     </div>
   )
 }
