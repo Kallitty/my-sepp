@@ -11,6 +11,7 @@ const quizes = [
   { title: 'Quiz 3', duration: '1 Hour', icon: <BiBook />, link: '/exam3/' },
   { title: 'Quiz 4', duration: '1 Hour', icon: <BiBook />, link: '/exam/4' },
   { title: 'Quiz 5', duration: '1 Hour', icon: <BiBook />, link: '/exam/5' },
+  { title: 'Quiz 6', duration: '1 Hour', icon: <BiBook />, link: '/exam/6' },
 ]
 
 const Profile = () => {

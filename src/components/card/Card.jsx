@@ -12,7 +12,7 @@ const Card = () => {
   return (
     <div className='sepp__card-container'>
       {course.map((item) => (
-        <div className='sepp__card'>
+        <div key={item.id} className='sepp__card'>
           <div className='sepp__card--cover'>{item.icon}</div>
           <div className='sepp__card--title'>{item.title}</div>
         </div>
