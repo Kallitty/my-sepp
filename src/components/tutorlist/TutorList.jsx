@@ -3,16 +3,30 @@ import './tutorlist.scss'
 import { Profil } from './importtl.js'
 
 const tutors = [
-  { image: Profil, name: 'Dr U. Psalm', duration: '6 hours', cost: '24.90' },
-
-  { image: 'Image45', name: 'Prof M. Edu', duration: '4 hours', cost: '27.80' },
   {
+    id: 1,
+    image: Profil,
+    name: 'Dr U. Psalm',
+    duration: '6 hours',
+    cost: '24.90',
+  },
+
+  {
+    id: 2,
+    image: 'Image45',
+    name: 'Prof M. Edu',
+    duration: '4 hours',
+    cost: '27.80',
+  },
+  {
+    id: 3,
     image: 'Image5',
     name: 'Mrs M. Cath',
     duration: '4.5 hours',
     cost: '25.80',
   },
   {
+    id: 4,
     image: 'Image85',
     name: 'Prof C. Mia',
     duration: '4 hours',
@@ -33,7 +47,7 @@ const TutorList = () => {
       </div>
       <div className='sepp__tutorlist-container'>
         {tutors.map((tutor) => (
-          <div className='sepp__tutorlist--list'>
+          <div key={tutor.id} className='sepp__tutorlist--list'>
             <div className='sepp__tutorlist--tutor-detail'>
               <img src={tutor.image} alt={tutor.name} />
               <h4>{tutor.name}</h4>
