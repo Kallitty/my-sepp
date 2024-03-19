@@ -1,5 +1,10 @@
-// import { jsQuizz } from '../../constants'
 import React, { useState } from 'react'
+import './quiz.scss'
+
+import { jsQuizz } from '../../constants'
+
+// import { jsQuizz } from '../../records.json'
+
 import { resultInitialState } from '../../initials'
 
 const Quiz = ({ questions }) => {
@@ -11,7 +16,7 @@ const Quiz = ({ questions }) => {
   const [showResult, setShowResult] = useState(false)
   const [showConfirmationModal, setShowConfirmationModal] = useState(false)
 
-  const { question, choices, correctAnswer, image } = questions[currentQuestion]
+  const { question, choices } = questions[currentQuestion]
 
   const onAnswerClick = (answer, index) => {
     const updatedSelectedAnswers = [...selectedAnswers]
@@ -52,11 +57,11 @@ const Quiz = ({ questions }) => {
   }
 
   const onClickNext = () => {
-    if (currentQuestion !== questions.length - 1) {
-      setCurrentQuestion((prev) => prev + 1)
-    } else {
-      setShowConfirmationModal(true)
-    }
+    setCurrentQuestion((prev) => prev + 1)
+  }
+  const onFinish = () => {
+    setShowConfirmationModal(!showConfirmationModal)
+    // setShowConfirmationModal(true) thesame thing
   }
 
   const onClickPrevious = () => {
@@ -73,7 +78,7 @@ const Quiz = ({ questions }) => {
   }
 
   return (
-    <div className='quiz-container'>
+    <div className='sepp__quiz-container'>
       {!showResult ? (
         <>
           {questions.map((q, index) => (
@@ -82,14 +87,20 @@ const Quiz = ({ questions }) => {
               style={{ display: currentQuestion === index ? 'block' : 'none' }}
             >
               <div>
-                <span className='active-question-no'> {index + 1}</span>
-                <span className='total-question'> /{questions.length}</span>
+                <span className='sepp__quiz-active-question-no'>
+                  {' '}
+                  {index + 1}
+                </span>
+                <span className='sepp__quiz-total-question'>
+                  {' '}
+                  /{questions.length}
+                </span>
               </div>
               {q.isVisible && (
                 <img
                   src={q.icon}
                   alt={`Question ${q.id} icon`}
-                  className='icon-img'
+                  className='sepp__quiz-icon-img'
                 />
               )}
 
@@ -101,7 +112,7 @@ const Quiz = ({ questions }) => {
                     key={answer}
                     className={
                       selectedAnswers[currentQuestion] === index
-                        ? 'selected-answer'
+                        ? 'sepp__quiz-selected-answer'
                         : null
                     }
                   >
@@ -109,18 +120,22 @@ const Quiz = ({ questions }) => {
                   </li>
                 ))}
               </ul>
-              <div className='footer'>
+              <div className='sepp__quiz-footer'>
                 <button
                   onClick={onClickPrevious}
                   disabled={currentQuestion === 0}
-                  className='previous-button'
+                  className='sepp__quiz-previous-button'
                 >
                   Previous
                 </button>
                 <button
-                  onClick={onClickNext}
+                  className='sepp__quiz-next-button'
+                  onClick={
+                    currentQuestion === questions.length - 1
+                      ? onFinish
+                      : onClickNext
+                  }
                   disabled={selectedAnswers[currentQuestion] === null}
-                  className='next-button'
                 >
                   {currentQuestion === questions.length - 1 ? 'Finish' : 'Next'}
                 </button>
@@ -129,15 +144,22 @@ const Quiz = ({ questions }) => {
           ))}
 
           {showConfirmationModal && (
-            <div className='modal'>
+            <div className='sepp__quiz-modal'>
               <p>Are you sure you want to submit?</p>
-              <button onClick={handleYesSubmit}>Yes</button>
-              <button onClick={handleNoCancel}>No</button>
+              <button
+                className='sepp__quiz-yes-button'
+                onClick={handleYesSubmit}
+              >
+                Yes
+              </button>
+              <button className='sepp__quiz-no-button' onClick={handleNoCancel}>
+                No
+              </button>
             </div>
           )}
         </>
       ) : (
-        <div className='result'>
+        <div className='sepp__quiz-result'>
           <h3>Result</h3>
           <p>
             Total Questions:<span> {questions.length}</span>

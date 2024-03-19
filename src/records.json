@@ -3,6 +3,8 @@
     "questions": [
       {
         "id": 1,
+        "type": "MCQs",
+        "correctAnswer": "A. Virtual DOM",
         "isVisible": true,
         "icon": "/simages/quesimg1.jpg",
         "question": "Which of the following is used in React.js to increase performance?",
@@ -11,12 +13,12 @@
           "B. Original DOM",
           "C. Both A and B",
           "D. None of the above"
-        ],
-        "type": "MCQs",
-        "correctAnswer": "A. Virtual DOM"
+        ]
       },
       {
         "id": 2,
+        "type": "MCQs",
+        "correctAnswer": "B. User Interface framework",
         "isVisible": true,
         "icon": "/simages/siteimg1.jpg",
         "question": "What is ReactJS?",
@@ -25,12 +27,12 @@
           "B. User Interface framework",
           "C. Both a and b",
           "D. None of the above"
-        ],
-        "type": "MCQs",
-        "correctAnswer": "B. User Interface framework"
+        ]
       },
       {
         "id": 3,
+        "type": "MCQs",
+        "correctAnswer": "D. Props",
         "isVisible": false,
         "question": "Identify the one which is used to pass data to components from outside",
         "choices": [
@@ -38,9 +40,7 @@
           "B. setState",
           "C. PropTypes",
           "D. Props"
-        ],
-        "type": "MCQs",
-        "correctAnswer": "D. Props"
+        ]
       },
       {
         "id": 4,
@@ -52,6 +52,8 @@
       },
       {
         "id": 5,
+        "type": "MCQs",
+        "correctAnswer": "C. JavaScript compiler",
         "isVisible": false,
         "question": "What is Babel?",
         "choices": [
@@ -59,9 +61,7 @@
           "B. JavaScript transpiler",
           "C. JavaScript compiler",
           "D. None of the above"
-        ],
-        "type": "MCQs",
-        "correctAnswer": "C. JavaScript compiler"
+        ]
       }
     ]
   }
