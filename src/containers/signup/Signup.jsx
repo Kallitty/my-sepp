@@ -12,6 +12,7 @@ import { FormInput } from '../../components'
 // import { NavbarWithAuth } from '../../components'
 
 function Signup() {
+  const [genderError, setGenderError] = useState('')
   const [values, setValues] = useState({
     lastname: '',
     firstname: '',
@@ -19,6 +20,7 @@ function Signup() {
     password: '',
     confirmpassword: '',
     gender: '',
+    date: '',
   })
   const inputs = [
     {
@@ -86,17 +88,31 @@ function Signup() {
       errorMessage: '',
     },
   ]
+
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    // Check if gender is selected
+    if (!values.gender) {
+      setGenderError('Please select a gender.')
+      return // Prevent form submission
+    }
+
+    console.log(values)
+    // Proceed with your form submission logic here
   }
 
   const onChange = (e) => {
+    if (e.target.name === 'gender' && e.target.value) {
+      setGenderError('') // Reset gender error if a valid option is selected
+    }
     setValues({ ...values, [e.target.name]: e.target.value })
   }
+
   // const handleSignIn = () => {
   //   setIsUserSignedIn(true) // Set isUserSignedIn to true
   // }
-  console.log(values)
+  // console.log(values)
   return (
     <>
       <Navbar />
@@ -108,8 +124,8 @@ function Signup() {
             <div className='col-md-6'>
               <div className='sepp__signup-left_container'>
                 <form
-                  // onSubmit={handleSubmit}
-                  // action=''
+                  onSubmit={handleSubmit}
+                  action=''
                   className='sepp__signup-form'
                 >
                   <header>CREATE AN ACCOUNT</header>
@@ -146,12 +162,19 @@ function Signup() {
                       className='myInput'
                       name='gender'
                       id='user_type'
-                      // className='form-control ca-check-plan valid'
+                      value={values.gender}
+                      // Set the value to the component's state
+                      onChange={onChange} // Use the same onChange handler to update the sta
                     >
                       <option value=''>Gender*</option>
                       <option value='Male'>Male</option>
                       <option value='Female'>Female</option>
                     </select>
+                    {genderError && (
+                      <div className='sepp__signup_gender-error'>
+                        {genderError}
+                      </div>
+                    )}
                   </div>
 
                   <div className='form-group'>
@@ -168,7 +191,7 @@ function Signup() {
                     type='submit'
                     className='button'
                     value='Register'
-                    onSubmit={handleSubmit}
+                    // onSubmit={handleSubmit}
                   />
 
                   <div className='sepp__signup-login'>
