@@ -1,13 +1,14 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { useState } from 'react'
 import { Navbar } from '../../components'
-import UserContext from '../login/UserContext'
+// import UserContext from '../login/UserContext'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Link } from 'react-router-dom'
 import './signup.scss'
 import Footer from '../footer/Footer'
-import { useRef } from 'react'
+// import { useRef } from 'react'
 import { FormInput } from '../../components'
+import axios from 'axios'
 
 // import { NavbarWithAuth } from '../../components'
 
@@ -97,8 +98,9 @@ function Signup() {
       setGenderError('Please select a gender.')
       return // Prevent form submission
     }
-
+    axios.post('https://localhost:8080/api/signup/save', values)
     console.log(values)
+
     // Proceed with your form submission logic here
   }
 
